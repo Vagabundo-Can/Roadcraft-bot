@@ -14,7 +14,10 @@ def ask(system, user, max_tokens=None, temperature=0.4):
                           headers={"x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json"})
         if r.status_code in (429, 500, 502, 503, 529):
             time.sleep(10 * (attempt + 1)); continue
-        r.raise_for_status()
+        if r.status_code == 400 and "temperature" in r.text and "temperature" in body:
+            body.pop("temperature"); continue  # bazı modeller temperature kabul etmiyor
+        if r.status_code >= 400:
+            raise RuntimeError(f"Claude API {r.status_code}: {r.text[:400]}")
         return "".join(b.get("text", "") for b in r.json()["content"] if b.get("type") == "text")
     r.raise_for_status()
 
