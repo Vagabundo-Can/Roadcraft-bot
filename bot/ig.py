@@ -1,9 +1,11 @@
-"""Instagram API (Instagram Login, graph.instagram.com) istemcisi.
-Gerekli izinler: instagram_business_basic, instagram_business_content_publish,
-instagram_business_manage_comments, instagram_business_manage_insights."""
+"""Instagram Graph API istemcisi (Facebook ile giriş yolu, graph.facebook.com).
+IG_USER_ID = Facebook Sayfasına bağlı Instagram profesyonel hesabının ID'si,
+IG_ACCESS_TOKEN = o Sayfanın süresiz Sayfa erişim anahtarı.
+Gerekli izinler: instagram_basic, instagram_content_publish, instagram_manage_comments,
+instagram_manage_insights, pages_show_list, pages_read_engagement, business_management."""
 import os, time, requests
 
-API = os.environ.get("IG_API_BASE", "https://graph.instagram.com")
+API = os.environ.get("IG_API_BASE", "https://graph.facebook.com")
 VER = os.environ.get("IG_API_VERSION", "v23.0")
 
 
@@ -14,7 +16,7 @@ class IGError(RuntimeError):
 class IG:
     def __init__(self, token=None, user_id=None, session=None):
         self.token = token or os.environ["IG_ACCESS_TOKEN"]
-        self.user_id = user_id or os.environ.get("IG_USER_ID") or "me"
+        self.user_id = user_id or os.environ["IG_USER_ID"]
         self.s = session or requests.Session()
 
     def _req(self, method, path, **params):
@@ -36,7 +38,7 @@ class IG:
 
     # --- hesap ---
     def me(self):
-        return self._req("GET", "me", fields="user_id,username")
+        return self._req("GET", self.user_id, fields="id,username")
 
     def publishing_limit(self):
         return self._req("GET", f"{self.user_id}/content_publishing_limit", fields="quota_usage,config")
@@ -99,6 +101,6 @@ class IG:
         return res
 
     # --- token ---
-    def refresh_token(self):
-        j = self._req("GET", f"{API}/refresh_access_token", grant_type="ig_refresh_token")
-        return j["access_token"], j.get("expires_in")
+    def check_token(self):
+        """Sayfa anahtarı süresizdir; sadece hâlâ geçerli mi diye bakar."""
+        return self.me()

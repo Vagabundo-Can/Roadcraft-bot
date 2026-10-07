@@ -48,7 +48,7 @@ https://console.anthropic.com → **API Keys** → **Create Key**. **Billing** b
 | `IG_ACCESS_TOKEN` | 2. adımdaki erişim anahtarı |
 | `IG_USER_ID` | 2. adımdaki Instagram kullanıcı ID |
 | `ANTHROPIC_API_KEY` | 3. adımdaki anahtar |
-| `GH_PAT` | GitHub → Settings → Developer settings → **Fine-grained tokens** → yalnızca bu depo, izin: **Secrets: Read and write** (anahtarın her hafta kendini yenileyebilmesi için) |
+| (GH_PAT artık gerekmiyor: Sayfa anahtarı süresiz) | |
 
 ### 5. Ayarlar
 `config.yaml` dosyasını GitHub'da düzenle:

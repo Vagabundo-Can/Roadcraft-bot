@@ -39,11 +39,11 @@ jobs:
         run: |
           R=$(ls -t data/reports/*.md | head -1)
           gh issue create --title "Haftalık rapor $(date +%F)" --body-file "$R" || true
-      - name: Instagram anahtarını yenile
+      - name: Instagram anahtarını kontrol et
         if: github.event.schedule == '10 18 * * 0'
         env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          GH_PAT: ${{ secrets.GH_PAT }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
         run: python -m bot.refresh_token
       - name: Kaydet
         if: always()
