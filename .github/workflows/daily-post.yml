@@ -5,6 +5,7 @@ on:
     - cron: "35 7 * * 0,6"    # hafta sonu ~10:35 TR
     - cron: "5 18 * * 1-5"    # yedek deneme (gün zaten yayınlandıysa hiçbir şey yapmaz)
     - cron: "35 9 * * 0,6"
+    - cron: "20 4 * * *"      # ~07:20 TR: sadece config.yaml'daki "ekstra" sabah yayınları
   workflow_dispatch:
     inputs:
       tarih:
@@ -35,6 +36,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           BOT_DATE: ${{ inputs.tarih }}
+          SADECE_EKSTRA: ${{ github.event.schedule == '20 4 * * *' && '1' || '' }}
         run: python -m bot.publish render
       - uses: actions/upload-artifact@v4
         with: { name: work, path: "out/today.json\ndata/scripts/" , include-hidden-files: true }

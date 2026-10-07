@@ -21,7 +21,14 @@ def caption_for(s, row):
 
 
 def cmd_render():
-    d = today(); n = day_no(d); st = state()
+    d = today(); st = state()
+    extra = {str(e["tarih"]): int(e["gun_no"]) for e in (CFG["yayin"].get("ekstra") or [])}
+    if os.environ.get("SADECE_EKSTRA"):
+        if d.isoformat() not in extra:
+            log.info("Bugün sabah ek yayını yok."); return write_today(None)
+        n = extra[d.isoformat()]
+    else:
+        n = day_no(d)
     if n < 1 or n > 700:
         log.info("Plan dışı gün (%s). Çıkılıyor.", n); return write_today(None)
     if str(n) in st["yayinlar"]:

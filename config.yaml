@@ -1,7 +1,7 @@
 # roadcraft-bot ayarları. Kurulumda yalnızca "hesap" bölümünü düzenlemen yeterli.
 hesap:
   handle: "@surusakli"          # videoların altında görünen imza
-  baslangic_tarihi: "2026-10-12"     # plan.csv'deki Gün 1 hangi tarihe denk gelsin (botu geç kurarsan değiştir)
+  baslangic_tarihi: "2026-10-07"     # Gün N = bu tarih + (N-1) gün. Gün 1 aşağıdaki ekstra yayınla 8 Ekim sabahı çıkar
   saat_dilimi: "Europe/Istanbul"
 
 yayin:
@@ -10,6 +10,9 @@ yayin:
   hafta_sonu: "11:00"
   sabit_hashtagler: ["#motosiklet", "#motosikletegitimi", "#güvenlisürüş", "#roadcraft", "#motorcycle"]
   imza: ""                           # her açıklamanın sonuna eklenecek satır (boş bırakılabilir)
+  # Sabah ek yayınları (07:20 UTC+3 civarı cron). O tarihte yalnızca burada yazan gün yayınlanır.
+  ekstra:
+    - { tarih: "2026-10-08", gun_no: 1 }
 
 yorum:
   aktif: true
