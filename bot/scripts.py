@@ -85,7 +85,8 @@ def generate(row, plan, llm, extra=""):
 def ensure(n, plan=None, llm=None, force=False, extra=""):
     """Gün n için senaryo yoksa üretir. Quiz üretildiğinde ertesi günün cevap senaryosu da aynı soruyla yazılır."""
     plan = plan or load_plan(); row = plan[int(n)]
-    if get(n) and not force: return get(n)
+    cur = get(n)
+    if cur and not force and not (llm and cur.get("_yedek")): return cur  # yedek senaryo varsa LLM ile yeniden dene
     s = None
     if row["sablon"] == "cevap":
         q = get(int(n) - 1)
