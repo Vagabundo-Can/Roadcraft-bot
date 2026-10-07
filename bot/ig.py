@@ -6,7 +6,7 @@ instagram_manage_insights, pages_show_list, pages_read_engagement, business_mana
 import os, time, requests
 
 API = os.environ.get("IG_API_BASE", "https://graph.facebook.com")
-VER = os.environ.get("IG_API_VERSION", "v23.0")
+VER = os.environ.get("IG_API_VERSION", "v26.0")
 
 
 class IGError(RuntimeError):
