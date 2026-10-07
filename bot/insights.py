@@ -18,7 +18,7 @@ def load():
 def save(rows):
     with open(DATA / "metrics.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS); w.writeheader()
-        for r in sorted(rows.values(), key=lambda r: int(r["gun_no"])): w.writerow({k: r.get(k, "") for k in FIELDS})
+        for r in sorted(rows.values(), key=lambda r: (0, int(r["gun_no"])) if str(r["gun_no"]).isdigit() else (1, 0)): w.writerow({k: r.get(k, "") for k in FIELDS})
 
 
 def num(x):
