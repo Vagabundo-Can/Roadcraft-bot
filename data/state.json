@@ -1,5 +1,17 @@
 {
-  "yayinlar": {},
+  "yayinlar": {
+    "test:test001": {
+      "container_id": "18120337462851935",
+      "media_id": "18080390525381082",
+      "permalink": "https://www.instagram.com/reel/DeNdfeCFS10/",
+      "gun_no": "test:test001",
+      "tarih": "2026-10-08",
+      "sablon": "ekipman",
+      "sutun": "Test",
+      "konu": "Kask ne zaman değişir?",
+      "yedek": false
+    }
+  },
   "cevaplanan_yorumlar": [],
   "gunluk_cevap": {
     "2026-10-08": 0
