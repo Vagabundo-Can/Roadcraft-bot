@@ -11,6 +11,10 @@ on:
       tarih:
         description: "Test için tarih (YYYY-AA-GG), boş = bugün"
         required: false
+      ekstra:
+        description: "Sabah ek yayınını çalıştır (true/false)"
+        required: false
+        default: "false"
 
 concurrency:
   group: repo-write
@@ -36,7 +40,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           BOT_DATE: ${{ inputs.tarih }}
-          SADECE_EKSTRA: ${{ github.event.schedule == '20 4 * * *' && '1' || '' }}
+          SADECE_EKSTRA: ${{ (github.event.schedule == '20 4 * * *' || inputs.ekstra == 'true') && '1' || '' }}
         run: python -m bot.publish render
       - uses: actions/upload-artifact@v4
         with: { name: work, path: "out/today.json\ndata/scripts/" , include-hidden-files: true }
