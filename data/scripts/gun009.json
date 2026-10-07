@@ -1,15 +1,25 @@
 {
   "sablon": "teknik",
-  "kanca": "Gidonu gevşek tutmak: çoğu sürücü bunu yanlış yapıyor",
-  "caption": "Gidonu gevşek tutmak (Seviye 1). Kapalı alanda doğru uygulama + yaygın hata, tek ana ipucu.",
-  "hashtags": [],
-  "_yedek": true,
+  "kanca": "Gidonu gevşek tutmak sandığından zordur",
   "baslik": "Gidonu gevşek tutmak (Seviye 1)",
-  "hata": "Tekniği acele ve gergin uygulamak.",
+  "hata": "Gidonu sıkı kavrayıp omuzları ve kolları geriyorlar, tüm gövde ağırlığını gidona veriyorlar.",
   "adimlar": [
-    "Bakış ileri",
-    "Kollar gevşek",
-    "Yavaş başla, kademeli artır"
+    "Kapalı ve kuru alanda düz çizgide düşük hızla ilerle.",
+    "Dirsekleri hafif bük, omuzları aşağı bırak.",
+    "Gidonu sıkma, kontrol edecek kadar tut.",
+    "Dizlerle depoyu kavra, gövdeni bacak ve karın kaslarınla taşı."
   ],
-  "ipucu": "Önce kapalı alanda, düşük hızda dene."
+  "ipucu": "Gevşek tutmak bırakmak değildir. Tutuşu, gidondan gelen geri bildirimi hissedecek kadar hafif tut.",
+  "caption": "Sonbahar geldi: yaprak, ıslak zemin, ilk yağmur. Bu koşullarda motorun verdiği geri bildirimi okumak şart. Gergin kollar bu bilgiyi bastırır. Alıştırmayı ıslakta değil, kuru ve kapalı alanda, düşük hızda yap: dirsekler hafif bükük, omuzlar aşağıda, gövde ağırlığı gidonda değil. Kontrol, sıkı tutuştan değil rahat tutuştan gelir. Roadcraft alanı: Kontrol. Seri: Kapalı Alan Tekniği.",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikleteğitimi",
+    "#ileriSürüş",
+    "#kapalıalan",
+    "#roadcraft",
+    "#güvenlisürüş",
+    "#sonbahar",
+    "#motorcu"
+  ],
+  "_duzeltildi": "Kanca ('çoğu sürücü bunu yanlış yapıyor') kanıtlanmamış genelleme içeriyor. 4. adımdaki 'gövdeni kendi taşısın' cümlesi hem dilbilgisi olarak bozuk hem de teknik olarak belirsiz: gövdeyi neyin taşıyacağı söylenmiyor. Caption'da sonbahar, yaprak ve ıslak zemin vurgusu yapılıp alıştırma koşulu belirtilmiyor. Bu, ıslak zeminde denemeyi çağrıştırabilir. Alıştırmanın kuru ve kapalı alanda yapılması gerektiği açık yazılmalı."
 }

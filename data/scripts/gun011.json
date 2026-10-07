@@ -1,17 +1,29 @@
 {
   "sablon": "cevap",
-  "kanca": "Dünkü sorunun cevabı",
-  "caption": "Cevap: Sollamada takip → hazırlık → geçiş pozisyonu. Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver.",
-  "hashtags": [],
-  "_yedek": true,
-  "soru": "Doğru mu? Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver.",
+  "kanca": "Dünkü sorunun cevabı: B",
+  "soru": "Islak yaprakla kaplı yolda kamyonun arkasındasın. Karşıdan araba geliyor, ileride kavşak var. Sollama için ne yaparsın?",
   "secenekler": {
-    "A": "Doğru",
-    "B": "Yanlış"
+    "A": "Hemen sola çıkıp geçişe başlarım",
+    "B": "Mesafeyi açarım, görüş ve boşluk netleşene kadar sollamayı ertelerim"
   },
-  "dogru": "A",
+  "dogru": "B",
   "aciklama": [
-    "Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver."
+    "Takip mesafesinden görüş al; hazırlık pozisyonuna ancak boşluk görünce geç.",
+    "Islak yaprakta tutuş azalır; ani fren ve ani yatış riskli.",
+    "Karşıdan araba ve kavşak varsa sollama ertelenir. Karar en sonda."
   ],
-  "kural": "Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver."
+  "kural": "Önce görüş, sonra pozisyon, en son karar. Net değilse sollama yok.",
+  "caption": "Sonbaharda ıslak yaprak, sollamada hata payını daraltır. Kamyonun hemen arkasında görüşün kısıtlıdır. Mesafeyi aç, görüşü al, hazırlık pozisyonuna geç. Boşluk net değilse sollamayı ertele. Beklemek sollamayı kaybetmek değil, kontrolü korumaktır. Sen olsan ne yapardın, yoruma yaz.",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikleteğitimi",
+    "#ileriSürüş",
+    "#sürüşgüvenliği",
+    "#sollama",
+    "#roadcraft",
+    "#sonbahar",
+    "#ıslakzemin",
+    "#güvenlisürüş",
+    "#motorcu"
+  ]
 }

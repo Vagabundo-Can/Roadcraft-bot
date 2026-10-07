@@ -1,17 +1,46 @@
 {
   "sablon": "quiz",
-  "kanca": "Doğru mu, yanlış mı?",
-  "caption": "Quiz: Sollamada takip → hazırlık → geçiş pozisyonu. Ramak kala anından 1 sn önce dondur; cevap yorumlarda, çözüm yarın.",
-  "hashtags": [],
-  "_yedek": true,
-  "soru": "Doğru mu? Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver.",
+  "kanca": "Sen olsan ne yapardın?",
+  "soru": "Islak yaprakla kaplı yolda kamyonun arkasındasın. Karşıdan araba geliyor, ileride kavşak var. Sollama için ne yaparsın?",
   "secenekler": {
-    "A": "Doğru",
-    "B": "Yanlış"
+    "A": "Hemen sola çıkıp geçişe başlarım",
+    "B": "Mesafeyi açarım, görüş ve boşluk netleşene kadar sollamayı ertelerim"
   },
-  "dogru": "A",
-  "aciklama": [
-    "Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver."
+  "dogru": "B",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "kamyon",
+        "serit": "sag",
+        "y": 0.6
+      },
+      {
+        "tip": "araba",
+        "serit": "sol",
+        "y": 0.4,
+        "tehlike": "karşı yönden yaklaşıyor"
+      },
+      {
+        "tip": "yan_yol_araba",
+        "serit": "yan_yol_sag",
+        "y": 0.3,
+        "tehlike": "kamyonun önünden çıkabilir"
+      }
+    ],
+    "kavsak": 0.3,
+    "yaya_gecidi": false,
+    "yuzey": "yaprak"
+  },
+  "caption": "Bu bir canlandırma sahnesi. Karşıdan araba, ileride kavşak, yerde ıslak yaprak var. Sen ne yapardın, A mı B mi? Cevabını yorumlara yaz, çözümü yarın birlikte konuşalım. Sollamada karar; görüş, boşluk ve zemin netleşmeden verilmez.",
+  "hashtags": [
+    "motosikletegitimi",
+    "ileriSurusEgitimi",
+    "roadcraft",
+    "sollama",
+    "guvenlisurus",
+    "sonbahar",
+    "motorcu",
+    "quiz"
   ],
-  "kural": "Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver."
+  "_duzeltildi": "Sahnede karşıdan gelen araba, ileride kavşak, kamyonun önünden çıkabilecek yan yol aracı ve ıslak yaprak zemin aynı anda var. Bu koşullarda doğru cevap sollamayı ertelemek. B şıkkı 'görüş alırım' diyerek sollamanın hâlâ mümkün olduğunu ima ediyor. 'Hazırlık pozisyonu' da Roadcraft'ın sistemindeki karşılığı net olmayan, belirsiz bir terim. Caption'daki 'Ramak kala anından bir saniye önce dondurduk' ifadesi sahneyi gerçek bir olaymış gibi gösteriyor, oysa bu bir canlandırma. 'Karar görüşü aldıktan sonra gelir' cümlesi de tek başına eksik kalıyor, çünkü boşluk ve zemin koşulu da kararın parçası."
 }

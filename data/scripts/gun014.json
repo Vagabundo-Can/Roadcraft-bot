@@ -1,12 +1,22 @@
 {
   "sablon": "efsane",
-  "kanca": "'Arka fren kullanılmaz' Efsane mi, gerçek mi?",
-  "caption": "Arka fren kullanılmaz. Yaygın inanışı Roadcraft ve veriyle değerlendir; cevabı izleyiciye önce tahmin ettir.",
-  "hashtags": [],
-  "_yedek": true,
-  "iddia": "Arka fren kullanılmaz",
-  "hukum": "KISMEN",
+  "kanca": "'Arka fren kullanılmaz' Efsane mi, gerçek mi? Cevabını söyle, sonra bak.",
+  "iddia": "Arka fren kullanılmaz.",
+  "hukum": "EFSANE",
   "aciklama": [
-    "Yaygın inanışı Roadcraft ve veriyle değerlendir; cevabı izleyiciye önce tahmin ettir."
+    "Ön fren işin büyük kısmını yapar. Arka fren işi tamamlar.",
+    "Roadcraft ikisini birlikte, yumuşak ve kademeli kullanmayı öğretir.",
+    "Islak yaprakta ve ilk yağmurda iki fren de hassas kullanılır."
+  ],
+  "caption": "Arka fren gereksiz değil. Ön fren daha çok iş yapar, ama arka fren motosikleti dengede tutmaya yardım eder. Sonbaharda ıslak yaprak ve ilk yağmur zemini kayganlaştırır. Bu yüzden iki frene de ani değil, kademeli bas. Sen ne tahmin etmiştin? Yorumlara yaz. 🍂",
+  "hashtags": [
+    "#motosikletegitimi",
+    "#ileriSurus",
+    "#motorcycleroadcraft",
+    "#frenteknigi",
+    "#efsanemigercekmi",
+    "#sonbahar",
+    "#guvenlisurus",
+    "#motosikletturkiye"
   ]
 }

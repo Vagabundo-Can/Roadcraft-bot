@@ -1,19 +1,27 @@
 {
   "sablon": "challenge",
-  "kanca": "Bunu yapabilir misin? En yavaş 10 metre",
-  "caption": "En yavaş 10 metre – Seviye 1. Kurulum ölçüleri ekranda; takipçiler kendi denemesini etiketler.",
-  "hashtags": [],
-  "_yedek": true,
-  "baslik": "En yavaş 10 metre – Seviye 1",
-  "seviye": "",
+  "kanca": "En yavaş 10 metre: yapabilir misin?",
+  "baslik": "En Yavaş 10 Metre",
+  "seviye": "Seviye 1",
   "duzen": {
-    "tip": "slalom",
-    "koni": 6,
-    "aralik_m": 6
+    "tip": "koridor",
+    "genislik_m": 1.5,
+    "uzunluk_m": 10
   },
   "kurallar": [
-    "Kapalı ve güvenli alanda dene",
-    "Bakış iki koni ileride",
-    "Ayak yere değmeden tamamla"
+    "Ayağını yere koymadan koridoru bitir.",
+    "Bakışın koridorun sonunda olsun, ön tekerlekte değil.",
+    "Koniye değersen ya da ayak koyarsan baştan başla."
+  ],
+  "caption": "Hız değil, kontrol yarışı. Kurulum ekranda: 10 metre uzunluk, 1,5 metre genişlik, koniyle işaretle. Bu drill sadece kapalı ve güvenli alanda yapılır: trafikten uzak, kuru, temiz ve düz zemin seç. Sonbaharda yaprak ve nemli zemin tutuşu düşürür, o yüzden alanı önce kontrol et. Kask, eldiven ve koruyucu ekipman şart. Denemeni çek, bizi etiketle, kaç saniyede bitirdiğini yoruma yaz.",
+  "hashtags": [
+    "#Challenge",
+    "#MotosikletEğitimi",
+    "#İleriSürüş",
+    "#Roadcraft",
+    "#YavaşSürüşKontrolü",
+    "#GüvenliSürüş",
+    "#MotosikletTürkiye",
+    "#Sonbahar"
   ]
 }
