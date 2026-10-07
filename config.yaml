@@ -1,0 +1,33 @@
+# roadcraft-bot ayarları. Kurulumda yalnızca "hesap" bölümünü düzenlemen yeterli.
+hesap:
+  handle: "@kullanici_adin"          # videoların altında görünen imza
+  baslangic_tarihi: "2026-10-12"     # plan.csv'deki Gün 1 hangi tarihe denk gelsin (botu geç kurarsan değiştir)
+  saat_dilimi: "Europe/Istanbul"
+
+yayin:
+  # GitHub cron UTC çalışır ve birkaç dakika gecikebilir; asıl saati workflow dosyası belirler.
+  hafta_ici: "19:30"
+  hafta_sonu: "11:00"
+  sabit_hashtagler: ["#motosiklet", "#motosikletegitimi", "#güvenlisürüş", "#roadcraft", "#motorcycle"]
+  imza: ""                           # her açıklamanın sonuna eklenecek satır (boş bırakılabilir)
+
+yorum:
+  aktif: true
+  son_kac_gun: 14                    # kaç günlük gönderilerin yorumları izlenir
+  calisma_basina_en_fazla: 25        # tek çalışmada en fazla kaç cevap
+  gunluk_en_fazla: 120
+  spam_gizle: true                   # bariz spam/link yorumlarını gizler (silmez)
+  # Bu kategoriler ASLA otomatik cevaplanmaz, haftalık rapora düşer:
+  cevaplanmayan: ["hukuki", "kaza_yaralanma", "hakaret", "emin_degil"]
+  cevap_imzasi: ""                   # ör. " — Asistan" (cevapların sonuna eklenir)
+
+model:
+  isim: "claude-sonnet-5-5"           # Anthropic API model adı
+  max_tokens: 2000
+
+adaptasyon:
+  senaryo_ileri_gun: 14              # haftalık işte kaç gün ilerisinin senaryosu hazırlanır
+  esnek_ileri_gun: 30                # aylık işte kaç günlük esnek slot yeniden yazılır
+  min_yayin: 4                       # bir sütun hakkında karar için en az yayın sayısı
+  buyut_esik: 1.2                    # genel ortalamanın 1,2 katı → büyüt
+  kucult_esik: 0.7                   # genel ortalamanın 0,7 katı altı → format değiştir

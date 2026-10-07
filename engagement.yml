@@ -1,0 +1,41 @@
+name: Yorumlar ve metrikler
+on:
+  schedule:
+    - cron: "17 5-21/2 * * *"     # 08:17–00:17 TR arası 2 saatte bir yorumlar
+    - cron: "40 3 * * *"          # her gün 06:40 TR metrikler
+  workflow_dispatch:
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Yorumlar
+        if: github.event.schedule != '40 3 * * *'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m bot.comments
+      - name: Metrikler
+        if: github.event.schedule == '40 3 * * *' || github.event_name == 'workflow_dispatch'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python -m bot.insights
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "roadcraft-bot"; git config user.email "bot@users.noreply.github.com"
+          git add data/; git diff --cached --quiet || git commit -m "Etkileşim: $(date -u +%FT%H%M)"
+          git pull --rebase -q && git push -q

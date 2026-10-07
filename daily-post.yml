@@ -1,0 +1,80 @@
+name: Günlük Reels
+on:
+  schedule:
+    - cron: "5 16 * * 1-5"    # hafta içi ~19:05 TR (GitHub birkaç dakika geciktirebilir)
+    - cron: "35 7 * * 0,6"    # hafta sonu ~10:35 TR
+    - cron: "5 18 * * 1-5"    # yedek deneme (gün zaten yayınlandıysa hiçbir şey yapmaz)
+    - cron: "35 9 * * 0,6"
+  workflow_dispatch:
+    inputs:
+      tarih:
+        description: "Test için tarih (YYYY-AA-GG), boş = bugün"
+        required: false
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    outputs:
+      var: ${{ steps.r.outputs.var }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -r requirements.txt
+      - id: r
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BOT_DATE: ${{ inputs.tarih }}
+        run: python -m bot.publish render
+      - uses: actions/upload-artifact@v4
+        with: { name: work, path: "out/today.json\ndata/scripts/" , include-hidden-files: true }
+      - if: steps.r.outputs.var == '1'
+        uses: actions/upload-pages-artifact@v3
+        with: { path: out/site }
+
+  deploy:
+    needs: render
+    if: needs.render.outputs.var == '1'
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    outputs:
+      url: ${{ steps.d.outputs.page_url }}
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4
+
+  post:
+    needs: [render, deploy]
+    if: needs.render.outputs.var == '1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with: { name: work, path: . }
+      - name: Video adresi yayında mı?
+        run: |
+          URL="${{ needs.deploy.outputs.url }}$(python -c "import json;print(json.load(open('out/today.json'))['dosya'])")"
+          for i in $(seq 1 30); do curl -sfI "$URL" >/dev/null && exit 0; sleep 10; done; exit 1
+      - env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python -m bot.publish post "${{ needs.deploy.outputs.url }}"
+      - name: Durumu kaydet
+        if: always()
+        run: |
+          git config user.name "roadcraft-bot"; git config user.email "bot@users.noreply.github.com"
+          git add data/; git diff --cached --quiet || git commit -m "Yayın: $(date -u +%F)"
+          git pull --rebase -q && git push -q

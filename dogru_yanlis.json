@@ -1,0 +1,26 @@
+{
+  "sablon": "dogru_yanlis",
+  "kanca": "Sinyal vermedi ama teker döndü",
+  "yanlis": {
+    "durum": "Yan yoldan çıkan aracın sürücüsünün seni gördüğünü varsaydı.",
+    "sonuc": "Seni görmedim!"
+  },
+  "dogru": {
+    "adimlar": [
+      "Aracın tekerine bak: dönüyor mu?",
+      "Gaz kes, frene hazırlan",
+      "Pozisyonunu kaçış alanı olacak şekilde ayarla"
+    ]
+  },
+  "kural": "Seni gördüğünü varsayma. Hazırlıklı ol.",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "yan_yol_araba",
+        "serit": "yan_yol_sag",
+        "y": 0.4
+      }
+    ],
+    "kavsak": 0.42
+  }
+}

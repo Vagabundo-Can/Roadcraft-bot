@@ -1,0 +1,11 @@
+{
+  "sablon": "ekipman",
+  "kanca": "Kaskın kaç yaşında?",
+  "baslik": "Kask ne zaman değişir?",
+  "maddeler": [
+    "Düşme ya da sert darbe sonrası mutlaka",
+    "İç köpük gevşediyse, kask başında oynuyorsa",
+    "Üreticinin önerdiği kullanım süresi dolduysa"
+  ],
+  "ipucu": "Üretim tarihi kaskın içindeki etikette yazar."
+}

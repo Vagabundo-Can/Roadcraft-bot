@@ -1,0 +1,23 @@
+{
+  "sablon": "dogru_yanlis",
+  "kanca": "Aynaya baktın. Yetmez.",
+  "premade": "assets/premade/gun001.mp4",
+  "yanlis": {
+    "durum": "Önde yavaş kamyonet. Sadece aynaya bakıp sinyal verdi ve sola kırdı.",
+    "sonuc": "RAMAK KALA!"
+  },
+  "dogru": {
+    "adimlar": [
+      "Ayna",
+      "Sinyal",
+      "Omuz kontrolü: kör noktaya bak",
+      "Boşsa geç, değilse bekle"
+    ]
+  },
+  "kural": "Ayna arkayı gösterir, yanını değil. Son bakış omuzdan.",
+  "caption": "Ayna sana arkayı gösterir, yanını değil. Şerit değiştirmeden önceki son bakışa Roadcraft 'lifesaver' (hayat kurtaran) kontrolü der. Sen her şerit değişiminde omuz kontrolü yapıyor musun? 👇",
+  "hashtags": [
+    "#körnokta",
+    "#omuzkontrolü"
+  ]
+}

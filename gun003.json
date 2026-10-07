@@ -1,0 +1,28 @@
+{
+  "sablon": "quiz",
+  "kanca": "Sen olsan ne yapardın?",
+  "soru": "Önünde yavaş bir kamyonet var, aynada sol şerit boş görünüyor. Sollamaya çıkmadan önce son adım?",
+  "secenekler": {
+    "A": "Sinyal ver ve hemen çık",
+    "B": "Omuzdan kör noktayı kontrol et"
+  },
+  "dogru": "B",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "kamyon",
+        "serit": "sag",
+        "y": 0.2
+      },
+      {
+        "tip": "araba",
+        "serit": "sol",
+        "y": 0.95
+      }
+    ]
+  },
+  "caption": "A mı B mi? Cevabını yorumlara yaz, çözüm yarın. 👇",
+  "hashtags": [
+    "#quiz"
+  ]
+}

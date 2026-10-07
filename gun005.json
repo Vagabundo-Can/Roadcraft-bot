@@ -1,0 +1,44 @@
+{
+  "sablon": "tehlike",
+  "kanca": "Bu sahnede kaç tehlike var?",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "park",
+        "serit": "sag_park",
+        "y": 0.35,
+        "tehlike": "Park halindeki araç: kapı açılabilir"
+      },
+      {
+        "tip": "top",
+        "serit": "sag",
+        "y": 0.15,
+        "tehlike": "Yola çıkan top: arkasından çocuk gelebilir"
+      },
+      {
+        "tip": "otobus",
+        "serit": "sol",
+        "y": 0.3
+      },
+      {
+        "tip": "yan_yol_araba",
+        "serit": "yan_yol_sag",
+        "y": 0.62,
+        "tehlike": "Yan yoldan çıkmak üzere olan araç"
+      },
+      {
+        "tip": "yaya",
+        "serit": "kaldirim_sol",
+        "y": 0.12,
+        "tehlike": "Duran otobüsün önünden geçebilecek yaya"
+      }
+    ],
+    "kavsak": 0.48
+  },
+  "kapanis": "Roadcraft: Gözlem uzaktan başlar, tahminle biter.",
+  "caption": "Şehir içi ana cadde. Ben 4 tehlike saydım, sen kaç tane buldun? Videoyu durdurmadan önce say. 👇",
+  "hashtags": [
+    "#tehlikeavı",
+    "#gözlem"
+  ]
+}

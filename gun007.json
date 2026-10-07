@@ -1,0 +1,14 @@
+{
+  "sablon": "yorum_soru",
+  "kanca": "Bu hafta en çok bunu sordunuz",
+  "soru": "Omuz kontrolü yaparken motosiklet bakılan yöne kaymıyor mu?",
+  "cevap": [
+    "Kayabilir; bu yüzden bakış kısa olmalı (0,5 sn)",
+    "Kollar gevşek, gidonu kafa ile birlikte çevirme",
+    "Önce kapalı alanda düz giderken pratik yap"
+  ],
+  "caption": "Haklı bir soru: kafayı çevirince motosiklet de o yöne gidebilir. Çözüm kısa bakış ve gevşek kollar. Senin sorun ne? Yorumlara yaz.",
+  "hashtags": [
+    "#sorucevap"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "sablon": "teknik",
+  "kanca": "Gidonu sağa it, motosiklet sağa döner",
+  "baslik": "Karşı direksiyon temelleri (Seviye 1)",
+  "hata": "Yatışı vücudu eğerek başlatmaya çalışmak; gidonu sıkı tutmak.",
+  "adimlar": [
+    "Bakışını dönüş yönüne çevir",
+    "Dönmek istediğin taraftaki gidon ucunu hafifçe ileri it",
+    "Motosiklet yatınca baskıyı azalt, gazı sabit tut"
+  ],
+  "ipucu": "30 km/s üstünde her yön değişimi karşı direksiyonla başlar. Kapalı alanda koniler arasında dene.",
+  "caption": "Karşı direksiyon: 'Sağa dönmek için sağ gidonu it.' Kulağa ters geliyor ama her virajda zaten yapıyorsun. Bilinçli yapınca kaçınma manevraların keskinleşir.",
+  "hashtags": [
+    "#karşıdireksiyon",
+    "#countersteering"
+  ]
+}

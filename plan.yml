@@ -1,0 +1,53 @@
+name: Plan, rapor ve anahtar yenileme
+on:
+  schedule:
+    - cron: "10 18 * * 0"     # her Pazar 21:10 TR: 14 günlük senaryolar + haftalık rapor + anahtar yenileme
+    - cron: "25 18 1 * *"     # her ayın 1'i 21:25 TR: esnek slotları yeniden yaz
+  workflow_dispatch:
+    inputs:
+      mod:
+        description: "weekly | monthly"
+        default: weekly
+
+concurrency:
+  group: repo-write
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt
+      - name: Aylık adaptasyon
+        if: github.event.schedule == '25 18 1 * *' || inputs.mod == 'monthly'
+        env: { ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}" }
+        run: python -m bot.adapt monthly
+      - name: Haftalık senaryolar + rapor
+        if: github.event.schedule == '10 18 * * 0' || inputs.mod == 'weekly'
+        env: { ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}" }
+        run: python -m bot.adapt weekly
+      - name: Raporu Issue olarak aç
+        if: github.event.schedule == '10 18 * * 0' || inputs.mod == 'weekly'
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          R=$(ls -t data/reports/*.md | head -1)
+          gh issue create --title "Haftalık rapor $(date +%F)" --body-file "$R" || true
+      - name: Instagram anahtarını yenile
+        if: github.event.schedule == '10 18 * * 0'
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python -m bot.refresh_token
+      - name: Kaydet
+        if: always()
+        run: |
+          git config user.name "roadcraft-bot"; git config user.email "bot@users.noreply.github.com"
+          git add data/; git diff --cached --quiet || git commit -m "Plan: $(date -u +%F)"
+          git pull --rebase -q && git push -q

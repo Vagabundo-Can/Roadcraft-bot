@@ -1,0 +1,18 @@
+{
+  "sablon": "mini_sinav",
+  "kanca": "Bu haftayı ne kadar iyi takip ettin?",
+  "sorular": [
+    {
+      "s": "Şerit değiştirmeden önceki son bakış?",
+      "c": "Omuz kontrolü"
+    },
+    {
+      "s": "Sağa dönmek için hangi gidon ucu itilir?",
+      "c": "Sağ gidon ucu"
+    },
+    {
+      "s": "Kuru zeminde takip mesafesi?",
+      "c": "En az 2 saniye"
+    }
+  ]
+}
