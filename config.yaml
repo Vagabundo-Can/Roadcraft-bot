@@ -1,6 +1,6 @@
 # roadcraft-bot ayarları. Kurulumda yalnızca "hesap" bölümünü düzenlemen yeterli.
 hesap:
-  handle: "@kullanici_adin"          # videoların altında görünen imza
+  handle: "@surusakli"          # videoların altında görünen imza
   baslangic_tarihi: "2026-10-12"     # plan.csv'deki Gün 1 hangi tarihe denk gelsin (botu geç kurarsan değiştir)
   saat_dilimi: "Europe/Istanbul"
 
