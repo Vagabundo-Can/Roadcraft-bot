@@ -1,0 +1,19 @@
+{
+  "sablon": "challenge",
+  "kanca": "Bunu yapabilir misin? En yavaş 10 metre",
+  "caption": "En yavaş 10 metre – Seviye 1. Kurulum ölçüleri ekranda; takipçiler kendi denemesini etiketler.",
+  "hashtags": [],
+  "_yedek": true,
+  "baslik": "En yavaş 10 metre – Seviye 1",
+  "seviye": "",
+  "duzen": {
+    "tip": "slalom",
+    "koni": 6,
+    "aralik_m": 6
+  },
+  "kurallar": [
+    "Kapalı ve güvenli alanda dene",
+    "Bakış iki koni ileride",
+    "Ayak yere değmeden tamamla"
+  ]
+}

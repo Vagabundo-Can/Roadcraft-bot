@@ -1,0 +1,18 @@
+{
+  "sablon": "dogru_yanlis",
+  "kanca": "Sollamaya arkasına yapışarak başlama",
+  "caption": "Sollamada takip → hazırlık → geçiş pozisyonu. Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver.",
+  "hashtags": [],
+  "_yedek": true,
+  "yanlis": {
+    "durum": "Sollamaya arkasına yapışarak başlama",
+    "sonuc": "RAMAK KALA!"
+  },
+  "dogru": {
+    "adimlar": [
+      "Sollamada takip → hazırlık → geçiş pozisyonu",
+      "Erken gör, erken karar ver"
+    ]
+  },
+  "kural": "Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver."
+}

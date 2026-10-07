@@ -1,0 +1,31 @@
+{
+  "sablon": "tehlike",
+  "kanca": "Bu sahnede kaç tehlike var? Say, sonra izle",
+  "caption": "Mahalle arası – odak: Konumlanma. Roadcraft gözlem: mahalle arası ortamında tehlikeleri erken tanı (konumlanma).",
+  "hashtags": [],
+  "_yedek": true,
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "park",
+        "serit": "sag_park",
+        "y": 0.35,
+        "tehlike": "Park halindeki araç: kapı açılabilir"
+      },
+      {
+        "tip": "yan_yol_araba",
+        "serit": "yan_yol_sag",
+        "y": 0.55,
+        "tehlike": "Yan yoldan çıkabilecek araç"
+      },
+      {
+        "tip": "yaya",
+        "serit": "kaldirim_sag",
+        "y": 0.2,
+        "tehlike": "Yola inebilecek yaya"
+      }
+    ],
+    "kavsak": 0.55
+  },
+  "kapanis": "Gözlem uzaktan başlar, tahminle biter."
+}

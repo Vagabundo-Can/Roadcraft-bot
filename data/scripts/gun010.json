@@ -1,0 +1,17 @@
+{
+  "sablon": "quiz",
+  "kanca": "Doğru mu, yanlış mı?",
+  "caption": "Quiz: Sollamada takip → hazırlık → geçiş pozisyonu. Ramak kala anından 1 sn önce dondur; cevap yorumlarda, çözüm yarın.",
+  "hashtags": [],
+  "_yedek": true,
+  "soru": "Doğru mu? Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver.",
+  "secenekler": {
+    "A": "Doğru",
+    "B": "Yanlış"
+  },
+  "dogru": "A",
+  "aciklama": [
+    "Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver."
+  ],
+  "kural": "Takip mesafesinden görüş al, hazırlık pozisyonuna geç, kararı sonra ver."
+}
