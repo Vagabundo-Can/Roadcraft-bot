@@ -15,6 +15,9 @@ on:
         description: "Sabah ek yayınını çalıştır (true/false)"
         required: false
         default: "false"
+      test:
+        description: "Takvim dışı test senaryosu (data/scripts/<ad>.json), boş = normal"
+        required: false
 
 concurrency:
   group: repo-write
@@ -40,6 +43,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           BOT_DATE: ${{ inputs.tarih }}
+          TEST_SCRIPT: ${{ inputs.test }}
           SADECE_EKSTRA: ${{ (github.event.schedule == '20 4 * * *' || inputs.ekstra == 'true') && '1' || '' }}
         run: python -m bot.publish render
       - uses: actions/upload-artifact@v4

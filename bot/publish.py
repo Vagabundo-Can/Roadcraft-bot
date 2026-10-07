@@ -22,6 +22,18 @@ def caption_for(s, row):
 
 def cmd_render():
     d = today(); st = state()
+    ts = os.environ.get("TEST_SCRIPT")
+    if ts:  # takvim dışı tek seferlik test yayını
+        key = f"test:{ts}"
+        if key in st["yayinlar"]:
+            log.info("Bu test zaten yayınlandı."); return write_today(None)
+        s = json.loads((ROOT / "data" / "scripts" / f"{ts}.json").read_text(encoding="utf-8"))
+        site = OUT / "site" / "v"; site.mkdir(parents=True, exist_ok=True)
+        render.render(s, site / f"{ts}.mp4", seed=99)
+        (OUT / "site" / "index.html").write_text("ok", encoding="utf-8")
+        row = {"konu": s.get("baslik", ts), "ana_mesaj": ""}
+        return write_today({"gun_no": key, "tarih": d.isoformat(), "dosya": f"v/{ts}.mp4", "caption": caption_for(s, row),
+                            "sablon": s["sablon"], "sutun": "Test", "konu": row["konu"], "yedek": False})
     extra = {str(e["tarih"]): int(e["gun_no"]) for e in (CFG["yayin"].get("ekstra") or [])}
     if os.environ.get("SADECE_EKSTRA"):
         if d.isoformat() not in extra:
