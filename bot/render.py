@@ -284,7 +284,7 @@ def progress(img, t, dur, color):
 
 def brand(img, sablon):
     d = ImageDraw.Draw(img); h = CFG["hesap"]["handle"]
-    f = F(34); tw = d.textlength(h, font=f); d.text(((W - tw) / 2, SAFE_BOT + 20), h, font=f, fill=(255, 255, 255, 200))
+    f = F(30); tw = d.textlength(h, font=f); d.text(((W - tw) / 2, 196), h, font=f, fill=(255, 255, 255, 210))
     lab = ETIKET.get(sablon, "")
     if lab: paste_c(img, pill(lab, ACCENT.get(sablon, WHITE) + (255,), DARK, 36), W / 2, 150)
 
