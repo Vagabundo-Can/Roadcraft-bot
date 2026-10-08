@@ -1,7 +1,7 @@
 # roadcraft-bot ayarları. Kurulumda yalnızca "hesap" bölümünü düzenlemen yeterli.
 hesap:
   handle: "@surusakli"          # videoların altında görünen imza
-  baslangic_tarihi: "2026-10-07"     # Gün N = bu tarih + (N-1) gün. Gün 1 aşağıdaki ekstra yayınla 8 Ekim sabahı çıkar
+  baslangic_tarihi: "2026-10-06"     # Gün N = bu tarih + (N-1) gün. 8 Ekim: sabah Gün 1 ve 2 çıktı, akşam Gün 3
   saat_dilimi: "Europe/Istanbul"
 
 yayin:
