@@ -36,7 +36,8 @@ class FakeLLM:
 class FakeIG:
     def __init__(self): self.posted, self.replies, self.hidden = [], [], []
     def me(self): return {"username": "hesabim"}
-    def publish_reel(self, url, caption):
+    def publish_reel(self, url, caption, **kw):
+        assert kw.get("cover_url", "").endswith(".jpg") or kw == {}, kw
         self.posted.append((url, caption)); n = len(self.posted)
         return {"container_id": f"c{n}", "media_id": f"m{n}", "permalink": f"https://instagram.com/reel/x{n}"}
     def comments(self, mid):
@@ -45,6 +46,7 @@ class FakeIG:
                 {"id": mid + "_3", "text": "Avukatım dava açalım diyor", "username": "c"},
                 {"id": mid + "_4", "text": "takipçi sat www.spam.com", "username": "d"},
                 {"id": mid + "_5", "text": "Zaten cevapladım", "username": "e", "replies": {"data": [{"username": "hesabim"}]}}]
+    def publish_story(self, u): return "s"
     def reply(self, cid, msg): self.replies.append((cid, msg))
     def hide(self, cid): self.hidden.append(cid)
     def insights(self, mid): return {"views": 1000, "reach": 800, "likes": 60, "comments": 8, "saved": 25, "shares": 7}

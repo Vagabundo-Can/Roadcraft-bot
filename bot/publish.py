@@ -73,8 +73,14 @@ def cmd_render():
         render.add_music(ROOT / s["premade"], vp, seed=n)
     else:
         render.render(s, vp, seed=n)
+    kapak = None
+    try:
+        render.cover(s, site / f"gun{n:03d}.jpg"); kapak = f"v/gun{n:03d}.jpg"
+    except Exception as ex:
+        log.warning("Kapak üretilemedi: %s", ex)
     (OUT / "site" / "index.html").write_text("<!doctype html><title>roadcraft-bot</title>ok", encoding="utf-8")
-    write_today({"gun_no": n, "tarih": d.isoformat(), "dosya": f"v/{name}", "caption": caption_for(s, row),
+    write_today({"gun_no": n, "tarih": d.isoformat(), "dosya": f"v/{name}", "kapak": kapak,
+                 "ses_adi": f"Sürüş Aklı · {row['seri']}", "caption": caption_for(s, row),
                  "sablon": row["sablon"], "sutun": row["sutun"], "konu": row["konu"], "yedek": bool(s.get("_yedek"))})
 
 
@@ -108,7 +114,13 @@ def cmd_post(base_url, client=None):
     ig = client or IG()
     url = base_url.rstrip("/") + "/" + t["dosya"]
     log.info("Yayınlanıyor: %s", url)
-    res = ig.publish_reel(url, t["caption"])
+    cov = base_url.rstrip("/") + "/" + t["kapak"] if t.get("kapak") else None
+    try:
+        res = ig.publish_reel(url, t["caption"], cover_url=cov, audio_name=t.get("ses_adi"))
+    except Exception as ex:
+        if not cov: raise
+        log.warning("Kapakla yayın başarısız (%s), kapaksız deneniyor.", ex)
+        res = ig.publish_reel(url, t["caption"])
     rec = {**res, "gun_no": n, "tarih": t["tarih"], "sablon": t["sablon"], "sutun": t["sutun"], "konu": t["konu"], "yedek": t["yedek"]}
     if CFG["yayin"].get("hikaye", True):
         try:

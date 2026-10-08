@@ -44,8 +44,11 @@ class IG:
         return self._req("GET", f"{self.user_id}/content_publishing_limit", fields="quota_usage,config")
 
     # --- yayın ---
-    def publish_reel(self, video_url, caption, wait_s=600, poll=20):
-        c = self._req("POST", f"{self.user_id}/media", media_type="REELS", video_url=video_url, caption=caption)
+    def publish_reel(self, video_url, caption, wait_s=600, poll=20, cover_url=None, audio_name=None):
+        extra = {"share_to_feed": "true"}
+        if cover_url: extra["cover_url"] = cover_url
+        if audio_name: extra["audio_name"] = audio_name[:60]
+        c = self._req("POST", f"{self.user_id}/media", media_type="REELS", video_url=video_url, caption=caption, **extra)
         cid = c["id"]
         t0 = time.time()
         while True:

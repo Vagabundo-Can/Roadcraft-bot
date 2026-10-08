@@ -41,7 +41,9 @@ YASAK = re.compile(r"\b(wheelie|drift|stunt|tek teker|yarış yap|makas at|polis
 
 
 def schema_for(sablon):
-    return SCHEMA[sablon].replace("SAHNE", SAHNE).replace("DUZEN", DUZEN)
+    sc = SCHEMA[sablon].replace("SAHNE", SAHNE).replace("DUZEN", DUZEN)
+    return sc.replace('"caption"', '"kapak":"≤5 kelime kapak başlığı: merak uyandıran, iddialı ama yanıltmayan; uydurma istatistik yok",'
+                      ' "caption"', 1)
 
 
 def _words(x):

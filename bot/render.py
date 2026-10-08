@@ -597,3 +597,58 @@ def still(script, t, path):
     tl, dur, bg = BUILDERS[script["sablon"]](script)
     img = Image.new("RGBA", (W, H), DARK + (255,)); bg(img, t); tl.compose(img, t); progress(img, t, dur, ACCENT.get(script["sablon"], WHITE)); brand(img, script["sablon"])
     img.convert("RGB").save(path); return dur
+
+
+# ---------------- kapak görseli ----------------
+KAPAK_ROZET = {"dogru_yanlis": "ÇOĞU SÜRÜCÜ BUNU YANLIŞ YAPIYOR", "teknik": "ÇOĞU SÜRÜCÜ BUNU BİLMİYOR",
+               "quiz": "SEN OLSAN NE YAPARDIN?", "cevap": "DOĞRU CEVAP ŞAŞIRTABİLİR", "tehlike": "KAÇ TEHLİKE GÖRÜYORSUN?",
+               "challenge": "YAPABİLİR MİSİN?", "efsane": "EFSANE Mİ, GERÇEK Mİ?", "ekipman": "BUNU KONTROL ETMEDEN BİNME",
+               "yorum_soru": "EN ÇOK SORULAN SORU", "mini_sinav": "3 SORU: KAÇINI BİLİRSİN?"}
+KAPAK_AN = {"dogru_yanlis": 0.32, "quiz": 0.62, "cevap": 0.55, "tehlike": 0.78, "challenge": 0.45, "efsane": 0.55}
+KAPAK_SIMGE = {"quiz": "?", "tehlike": "!", "dogru_yanlis": "!", "efsane": "?", "mini_sinav": "?", "challenge": "!"}
+
+
+def tr_upper(t):
+    return str(t).replace("i", "İ").replace("ı", "I").upper()
+
+
+def cover(script, path):
+    """Merak uyandıran kapak: videonun en çarpıcı anından bulanık arka plan + dev başlık. Metin, profil ızgarasındaki
+    3:4 ve akıştaki 1:1 kırpma içinde kalır."""
+    from PIL import ImageFilter
+    sb = script["sablon"]
+    tl, dur, bg = BUILDERS[sb](script)
+    t = dur * KAPAK_AN.get(sb, 0.5)
+    img = Image.new("RGBA", (W, H), DARK + (255,)); bg(img, t); tl.compose(img, t)
+    img = img.filter(ImageFilter.GaussianBlur(7))
+    img.alpha_composite(Image.new("RGBA", (W, H), DARK + (150,)))
+    acc = ACCENT.get(sb, RED)
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W - 1, H - 1], outline=acc, width=26)
+    # rozet
+    rz = KAPAK_ROZET.get(sb, "")
+    if rz:
+        p = pill(rz, YEL + (255,), DARK, 46); paste_c(img, p, W / 2, 500)
+    # başlık
+    head = tr_upper(script.get("kapak") or script.get("kanca") or script.get("baslik") or "")
+    words = head.split()
+    if len(words) > 7: head = " ".join(words[:7]) + "…"
+    f, lines = fit_text(head, 940, 4, 132, minimum=72)
+    lh = int(f.size * 1.12); y0 = 880 - lh * len(lines) / 2
+    for i, ln in enumerate(lines):
+        tw = d.textlength(ln, font=f)
+        col = YEL if i == len(lines) - 1 else WHITE
+        d.text(((W - tw) / 2, y0 + i * lh), ln, font=f, fill=col, stroke_width=10, stroke_fill=DARK)
+    # simge
+    sm = KAPAK_SIMGE.get(sb)
+    if sm:
+        cx, cy, r = W - 190, 330, 95
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=RED, outline=WHITE, width=10)
+        fs = F(150); tw = d.textlength(sm, font=fs); d.text((cx - tw / 2, cy - 95), sm, font=fs, fill=WHITE)
+    # alt çağrı
+    cta = card("SONUNA KADAR İZLE ▶", 900, 54, fg=WHITE, bg=RED + (255,), pad=26, max_lines=1)
+    paste_c(img, cta, W / 2, 1300)
+    hd = CFG["hesap"]["handle"]; fh = F(40); tw = d.textlength(hd, font=fh)
+    d.text(((W - tw) / 2, 1420), hd, font=fh, fill=(255, 255, 255), stroke_width=4, stroke_fill=DARK)
+    img.convert("RGB").save(path, "JPEG", quality=90)
+    return path
