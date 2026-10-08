@@ -6,6 +6,8 @@ on:
     - cron: "5 18 * * 1-5"    # yedek deneme (gün zaten yayınlandıysa hiçbir şey yapmaz)
     - cron: "35 9 * * 0,6"
     - cron: "20 4 * * *"      # ~07:20 TR: sadece config.yaml'daki "ekstra" sabah yayınları
+  push:
+    paths: ["data/tetik/sabah.txt"]   # sabah ek yayınını commit ile tetiklemek için
   workflow_dispatch:
     inputs:
       tarih:
@@ -44,7 +46,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           BOT_DATE: ${{ inputs.tarih }}
           TEST_SCRIPT: ${{ inputs.test }}
-          SADECE_EKSTRA: ${{ (github.event.schedule == '20 4 * * *' || inputs.ekstra == 'true') && '1' || '' }}
+          SADECE_EKSTRA: ${{ (github.event.schedule == '20 4 * * *' || inputs.ekstra == 'true' || github.event_name == 'push') && '1' || '' }}
         run: python -m bot.publish render
       - uses: actions/upload-artifact@v4
         with: { name: work, path: "out/today.json\ndata/scripts/" , include-hidden-files: true }
