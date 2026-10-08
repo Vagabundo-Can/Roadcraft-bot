@@ -20,7 +20,8 @@
       "sablon": "dogru_yanlis",
       "sutun": "Doğru / Yanlış",
       "konu": "Önde yavaş araç: ayna + sinyal + omuz kontrolü",
-      "yedek": false
+      "yedek": false,
+      "story_id": "17942759556091069"
     },
     "2": {
       "container_id": "18120428680851935",
@@ -31,7 +32,8 @@
       "sablon": "teknik",
       "sutun": "Teknik Kontrol",
       "konu": "Karşı direksiyon temelleri (Seviye 1)",
-      "yedek": false
+      "yedek": false,
+      "story_id": "17871091542640427"
     },
     "3": {
       "container_id": "18120475915851935",
