@@ -265,9 +265,12 @@ def frame_border(img, color, width=20):
 
 class Timeline:
     """Zamanlı öğeler: (görsel, x_merkez, y_üst, t0, t1, giriş)"""
-    def __init__(self): self.items = []; self.dur = 0; self.hooks = []
-    def add(self, im, t0, t1, y, x=W / 2, anim="up"):
+    def __init__(self): self.items = []; self.dur = 0; self.hooks = []; self.sfx = []
+    def add(self, im, t0, t1, y, x=W / 2, anim="up", sfx=None):
         self.items.append((im, x, y, t0, t1, anim)); self.dur = max(self.dur, t1)
+        if sfx is not False:
+            self.sfx.append((t0, sfx or ("impact" if anim == "pop" else "whoosh")))
+    def fx(self, t, kind): self.sfx.append((t, kind))
     def at(self, fn): self.hooks.append(fn)
     def compose(self, img, t):
         for im, x, y, t0, t1, anim in self.items:
@@ -291,6 +294,7 @@ def brand(img, sablon):
 # ---------------- şablonlar ----------------
 def hook_section(tl, s, t0=0.0, dur=1.8):
     tl.add(big_text(s.get("kanca", ""), 92), t0, t0 + dur, 760, anim="pop")
+    tl.fx(t0 + dur - 0.05, "whoosh")
     return t0 + dur
 
 def cta_section(tl, t0, text="Kaydet, sürüşten önce tekrar izle"):
@@ -300,13 +304,14 @@ def cta_section(tl, t0, text="Kaydet, sürüşten önce tekrar izle"):
 def build_dogru_yanlis(s):
     tl = Timeline(); t = hook_section(tl, s)
     y = s.get("yanlis", {}); dgr = s.get("dogru", {})
-    tl.add(pill("✗  YANLIŞ", RED + (255,)), t, t + 4.6, 300)
+    tl.add(pill("✗  YANLIŞ", RED + (255,)), t, t + 4.6, 300, sfx="buzz")
     d1 = read_time(y.get("durum", "")); tl.add(card(y.get("durum", ""), 900, 54, stripe=RED), t + 0.2, t + 4.6, 420)
     tl.add(big_text(y.get("sonuc", "RAMAK KALA!"), 80, RED), t + 0.2 + d1 * 0.6, t + 4.6, 900, anim="pop")
+    tl.fx(t + 0.2 + d1 * 0.6 - 0.35, "screech"); tl.fx(t + 0.2 + d1 * 0.6 - 0.9, "riser")
     red_win = (t, t + 4.6); t += 4.6
     adim = dgr.get("adimlar", [])[:4]
     dd = 1.2 + 1.5 * len(adim)
-    tl.add(pill("✓  DOĞRU", GREEN + (255,)), t, t + dd, 300)
+    tl.add(pill("✓  DOĞRU", GREEN + (255,)), t, t + dd, 300, sfx="ding")
     tl.add(steps_card(adim, GREEN, 900, 50), t + 0.2, t + dd, 420)
     green_win = (t, t + dd); t += dd
     tl.add(card(s.get("kural", ""), 900, 62, fg=DARK, bg=WHITE + (245,)), t, t + read_time(s.get("kural", "")) + 0.5, 700, anim="pop")
@@ -327,7 +332,7 @@ def build_teknik(s):
     tl = Timeline(); t = hook_section(tl, s)
     tl.add(card(s.get("baslik", ""), 900, 64, stripe=BLUE), t, t + 99, 300)
     h = s.get("hata", ""); dh = read_time(h) + 0.4
-    tl.add(pill("✗  YAYGIN HATA", RED + (255,), size=44), t + 0.2, t + dh, 560)
+    tl.add(pill("✗  YAYGIN HATA", RED + (255,), size=44), t + 0.2, t + dh, 560, sfx="buzz")
     tl.add(card(h, 900, 50), t + 0.3, t + dh, 680); t += dh
     adim = s.get("adimlar", [])[:4]; dd = 1.0 + 1.6 * len(adim)
     tl.add(steps_card(adim, BLUE, 900, 48, "Doğru teknik"), t, t + dd, 560); t += dd
@@ -353,6 +358,7 @@ def build_quiz(s, reveal=False):
         tl.add(cards[k], t + 0.3 * (i + 1), t + 99, yy); yy += cards[k].height + 18
     t += dq + 0.3 * len(keys)
     if not reveal:
+        for k_ in range(3): tl.fx(t - 3 + k_, "tick")
         tl.add(big_text("Cevabını yorumla", 70, YEL), t, t + 3.0, yy + 40, anim="pop")
         tl.add(card("Çözüm yarın", 600, 48, fg=DARK, bg=YEL + (245,)), t + 0.4, t + 3.0, yy + 200)
         t += 3.0
@@ -360,7 +366,7 @@ def build_quiz(s, reveal=False):
         dk = s.get("dogru", keys[0] if keys else "A")
         yy2 = ys
         for k in keys:
-            if k == dk: tl.add(card(f"✓  {k})  {ops[k]}", 900, 48, fg=DARK, bg=GREEN + (250,), align="left"), t, t + 99, yy2, anim="pop")
+            if k == dk: tl.add(card(f"✓  {k})  {ops[k]}", 900, 48, fg=DARK, bg=GREEN + (250,), align="left"), t, t + 99, yy2, anim="pop", sfx="ding")
             yy2 += cards[k].height + 18
         t += 1.6
         q_end = t
@@ -390,11 +396,13 @@ def build_tehlike(s):
     t = 0.0
     tl.add(big_text(s.get("kanca", "Kaç tehlike var?"), 80), 0, 2.2, 300, anim="pop")
     tl.add(card("3 saniye düşün…", 560, 46, fg=DARK, bg=YEL + (245,)), 2.2, 4.4, 300)
+    for k_ in range(3): tl.fx(2.4 + k_ * 0.66, "tick")
     t = 4.4; marks = []
     for n, (i, o) in enumerate(hz[:5]):
         x, y, _ = place(o); tm = t + n * 2.0
         marks.append((tm, x, y, n + 1))
-        tl.add(card(f"{n + 1}. {o['tehlike']}", 900, 46, stripe=AMBER, align="left"), tm, tm + 2.0, 260)
+        tl.add(card(f"{n + 1}. {o['tehlike']}", 900, 46, stripe=AMBER, align="left"), tm, tm + 2.0, 260, sfx="impact")
+        if o.get("tip") in ("araba", "yan_yol_araba", "kamyon", "otobus"): tl.fx(tm + 0.1, "horn")
     t += 2.0 * len(hz[:5])
     tl.add(card(f"{len(hz[:5])} tehlike. Kaçını buldun? Yorumla", 900, 52, fg=DARK, bg=AMBER + (245,)), t, t + 2.4, 260, anim="pop")
     kap = s.get("kapanis", "")
@@ -502,9 +510,11 @@ def build_efsane(s):
     tl.add(pill("EFSANE Mİ, GERÇEK Mİ?", ACCENT["efsane"] + (255,), DARK, 46), 0, 99, 330)
     iddia = s.get("iddia", ""); tl.add(big_text(f"“{iddia}”", 84), 0.3, 99, 520, anim="pop")
     t = 0.3 + read_time(iddia) + 0.3
-    tl.add(card("Sence? 3… 2… 1…", 620, 50, fg=DARK, bg=YEL + (245,)), t, t + 2.4, 1000); t += 2.4
+    tl.add(card("Sence? 3… 2… 1…", 620, 50, fg=DARK, bg=YEL + (245,)), t, t + 2.4, 1000)
+    for k_ in range(3): tl.fx(t + 0.2 + k_ * 0.75, "tick")
+    t += 2.4
     hk = str(s.get("hukum", "EFSANE")).upper(); col = {"EFSANE": RED, "GERÇEK": GREEN}.get(hk, AMBER)
-    tl.add(pill(hk, col + (255,), WHITE, 110), t, 99, 900, anim="pop"); t += 1.0
+    tl.add(pill(hk, col + (255,), WHITE, 110), t, 99, 900, anim="pop"); tl.fx(t, "buzz" if hk == "EFSANE" else "ding"); t += 1.0
     ac = s.get("aciklama", [])[:3]; da = 1.0 + sum(read_time(a, 1.8, 4.5) for a in ac)
     tl.add(steps_card(ac, col, 900, 44), t, t + da, 1090); t += da
     t = cta_section(tl, t, "Bunu bilmeyen bir arkadaşına gönder")
@@ -544,7 +554,7 @@ def build_mini_sinav(s):
         dq = read_time(q.get("s", "")) + 1.2; dc = read_time(q.get("c", ""), 1.6, 4)
         tl.add(pill(f"SORU {i + 1}/3", YEL + (255,), DARK, 40), t, t + dq + dc, 300)
         tl.add(card(q.get("s", ""), 900, 54), t, t + dq + dc, 420)
-        tl.add(card("✓ " + q.get("c", ""), 900, 50, fg=DARK, bg=GREEN + (245,)), t + dq, t + dq + dc, 820, anim="pop")
+        tl.add(card("✓ " + q.get("c", ""), 900, 50, fg=DARK, bg=GREEN + (245,)), t + dq, t + dq + dc, 820, anim="pop", sfx="ding")
         t += dq + dc
     t = cta_section(tl, t, "Kaç doğru yaptın? Yorumla")
     def bg(img, tt): img.alpha_composite(road_simple(tt, 170))
@@ -560,10 +570,10 @@ def render(script, out_path, seed=0):
     dur = clamp(dur + 0.4, 6.0, 60.0); n = int(dur * FPS)
     out_path = Path(out_path); out_path.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as td:
-        wav = Path(td) / "m.wav"; music.make(wav, dur, seed=seed)
+        wav = Path(td) / "m.wav"; music.make(wav, dur, seed=seed, events=tl.sfx)
         p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
                               "-r", str(FPS), "-i", "-", "-i", str(wav), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-profile:v", "high",
-                              "-crf", "20", "-preset", "medium", "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-shortest",
+                              "-crf", "20", "-preset", "medium", "-af", "loudnorm=I=-12:TP=-1.5:LRA=9", "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-shortest",
                               "-movflags", "+faststart", str(out_path)], stdin=subprocess.PIPE)
         for i in range(n):
             t = i / FPS
@@ -580,7 +590,7 @@ def add_music(video_in, out_path, seed=0):
     with tempfile.TemporaryDirectory() as td:
         wav = Path(td) / "m.wav"; music.make(wav, dur, seed=seed)
         subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-i", str(video_in), "-i", str(wav), "-map", "0:v:0", "-map", "1:a:0",
-                               "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", str(out_path)])
+                               "-c:v", "copy", "-af", "loudnorm=I=-12:TP=-1.5:LRA=9", "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-shortest", "-movflags", "+faststart", str(out_path)])
     return out_path, dur
 
 def still(script, t, path):

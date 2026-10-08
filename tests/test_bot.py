@@ -68,7 +68,8 @@ insights.run(client=ig); m = insights.load(); assert len(m) == 3; print("Metrik:
 os.environ["BOT_DATE"] = "2026-10-18"
 adapt.weekly(llm=FakeLLM)
 made = sorted(p.name for p in config.SCRIPTS.glob("gun*.json")); print("Senaryolar:", made[:3], "...", made[-1], len(made))
-for n in range(8, 21):
+n0 = config.day_no(config.today()) + 1
+for n in range(n0, n0 + 13):
     s = scripts.get(n); assert s and not s.get("_yedek"), n
     if s["sablon"] == "cevap": assert s["soru"] == scripts.get(n - 1)["soru"]
 os.environ["BOT_DATE"] = "2026-10-31"
