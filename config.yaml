@@ -9,6 +9,7 @@ yayin:
   hafta_ici: "19:30"
   hafta_sonu: "11:00"
   sabit_hashtagler: ["#motosiklet", "#motosikletegitimi", "#güvenlisürüş", "#roadcraft", "#motorcycle"]
+  hikaye: true                       # her Reels aynı videoyla hikâyede de paylaşılır
   imza: ""                           # her açıklamanın sonuna eklenecek satır (boş bırakılabilir)
   # Sabah ek yayınları (07:20 UTC+3 civarı cron). O tarihte yalnızca burada yazan gün yayınlanır.
   ekstra:

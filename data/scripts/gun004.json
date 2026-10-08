@@ -1,6 +1,6 @@
 {
   "sablon": "cevap",
-  "kanca": "Dünkü sorunun cevabı",
+  "kanca": "Öğlenki sorunun cevabı",
   "soru": "Önünde yavaş bir kamyonet var, aynada sol şerit boş görünüyor. Sollamaya çıkmadan önce son adım?",
   "secenekler": {
     "A": "Sinyal ver ve hemen çık",
@@ -13,7 +13,7 @@
     "Omuz kontrolü 0,5 saniye sürer"
   ],
   "kural": "Şerit değiştirmeden önce: ayna + sinyal + omuz.",
-  "caption": "Doğru cevap B. Ayna ne kadar iyi ayarlı olursa olsun sol arka çaprazda bir kör nokta kalır. Kaçınız doğru bildi?",
+  "caption": "Öğlenki sorunun doğru cevabı B. Ayna ne kadar iyi ayarlı olursa olsun sol arka çaprazda bir kör nokta kalır. Kaçınız doğru bildi?",
   "hashtags": [
     "#körnokta"
   ]

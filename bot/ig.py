@@ -63,6 +63,18 @@ class IG:
         info = self._req("GET", mid, fields="id,permalink,timestamp")
         return {"container_id": cid, "media_id": mid, "permalink": info.get("permalink", "")}
 
+    def publish_story(self, video_url, wait_s=600, poll=15):
+        """Aynı videoyu hikâye olarak da yayınlar (media_type=STORIES)."""
+        c = self._req("POST", f"{self.user_id}/media", media_type="STORIES", video_url=video_url)
+        cid = c["id"]; t0 = time.time()
+        while True:
+            st = self._req("GET", cid, fields="status_code,status")
+            if st.get("status_code") == "FINISHED": break
+            if st.get("status_code") in ("ERROR", "EXPIRED"): raise IGError(f"Hikâye konteyneri {st}")
+            if time.time() - t0 > wait_s: raise IGError("Hikâye zaman aşımı")
+            time.sleep(poll)
+        return self._req("POST", f"{self.user_id}/media_publish", creation_id=cid)["id"]
+
     # --- yorumlar ---
     def comments(self, media_id):
         out, j = [], self._req("GET", f"{media_id}/comments",

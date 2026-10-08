@@ -83,6 +83,11 @@ def cmd_post(base_url, client=None):
     log.info("Yayınlanıyor: %s", url)
     res = ig.publish_reel(url, t["caption"])
     rec = {**res, "gun_no": n, "tarih": t["tarih"], "sablon": t["sablon"], "sutun": t["sutun"], "konu": t["konu"], "yedek": t["yedek"]}
+    if CFG["yayin"].get("hikaye", True):
+        try:
+            rec["story_id"] = ig.publish_story(url); log.info("Hikâyede de paylaşıldı.")
+        except Exception as ex:
+            rec["story_hata"] = str(ex)[:200]; log.warning("Hikâye paylaşılamadı: %s", ex)
     st["yayinlar"][str(n)] = rec; save_state(st)
     append_csv(DATA / "posts.csv", ["gun_no", "tarih", "sutun", "sablon", "konu", "media_id", "permalink", "yedek"], rec)
     log.info("Yayınlandı: %s", res.get("permalink"))
