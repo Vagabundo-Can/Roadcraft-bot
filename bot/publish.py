@@ -22,6 +22,20 @@ def caption_for(s, row):
 
 def cmd_render():
     d = today(); st = state()
+    hk_only = [k.strip() for k in os.environ.get("SADECE_HIKAYE", "").split(",") if k.strip()]
+    if hk_only:  # sadece daha önce yayınlanmış reels'leri hikâyeye ekle (yeni reels yok)
+        done = {k for k, v in st["yayinlar"].items() if v.get("story_id")}
+        ek = []
+        for key in hk_only:
+            if key in done or key not in st["yayinlar"]: continue
+            name = key.replace("test:", "") if key.startswith("test:") else f"gun{int(key):03d}"
+            s = json.loads((ROOT / "data" / "scripts" / f"{name}.json").read_text(encoding="utf-8"))
+            vp = OUT / "site" / "v" / f"h_{name}.mp4"; vp.parent.mkdir(parents=True, exist_ok=True)
+            if s.get("premade") and (ROOT / s["premade"]).exists(): render.add_music(ROOT / s["premade"], vp, seed=7)
+            else: render.render(s, vp, seed=7)
+            ek.append({"anahtar": key, "dosya": f"v/h_{name}.mp4"})
+        (OUT / "site" / "index.html").write_text("ok", encoding="utf-8")
+        return write_today({"hikaye_only": True, "ek_hikayeler": ek} if ek else None)
     ts = os.environ.get("TEST_SCRIPT")
     if ts:  # takvim dışı tek seferlik test yayını
         key = f"test:{ts}"
@@ -75,7 +89,20 @@ def write_today(obj):
 def cmd_post(base_url, client=None):
     t = json.loads((OUT / "today.json").read_text(encoding="utf-8"))
     if not t: log.info("Yayınlanacak bir şey yok."); return
-    st = state(); n = t["gun_no"]
+    st = state()
+    if t.get("hikaye_only"):
+        from .ig import IG
+        ig = client or IG()
+        for e in t["ek_hikayeler"]:
+            rec = st["yayinlar"].get(e["anahtar"], {})
+            if rec.get("story_id"): continue
+            try:
+                rec["story_id"] = ig.publish_story(base_url.rstrip("/") + "/" + e["dosya"]); save_state(st)
+                log.info("Hikâyeye eklendi: %s", e["anahtar"])
+            except Exception as ex:
+                log.warning("Hikâye paylaşılamadı (%s): %s", e["anahtar"], ex)
+        return
+    n = t["gun_no"]
     if str(n) in st["yayinlar"]: log.info("Zaten yayınlandı."); return
     from .ig import IG
     ig = client or IG()

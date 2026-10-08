@@ -49,6 +49,7 @@ jobs:
           SADECE_EKSTRA: ${{ (github.event.schedule == '20 4 * * *' || inputs.ekstra == 'true') && '1' || '' }}
         run: |
           if [ "${{ github.event_name }}" = "push" ] && grep -q sabah data/tetik/mod.txt 2>/dev/null; then export SADECE_EKSTRA=1; fi
+          if [ "${{ github.event_name }}" = "push" ] && grep -q hikaye data/tetik/mod.txt 2>/dev/null; then export SADECE_HIKAYE="$(cat data/tetik/hikaye.txt)"; fi
           python -m bot.publish render
       - uses: actions/upload-artifact@v4
         with: { name: work, path: "out/today.json\ndata/scripts/" , include-hidden-files: true }
