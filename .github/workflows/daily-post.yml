@@ -81,7 +81,7 @@ jobs:
         with: { name: work, path: . }
       - name: Video adresi yayında mı?
         run: |
-          URL="${{ needs.deploy.outputs.url }}$(python -c "import json;print(json.load(open('out/today.json'))['dosya'])")"
+          URL="${{ needs.deploy.outputs.url }}$(python -c "import json;t=json.load(open('out/today.json'));print(t.get('dosya') or t['ek_hikayeler'][0]['dosya'])")"
           for i in $(seq 1 30); do curl -sfI "$URL" >/dev/null && exit 0; sleep 10; done; exit 1
       - env:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
