@@ -9,7 +9,8 @@
       "sablon": "ekipman",
       "sutun": "Test",
       "konu": "Kask ne zaman değişir?",
-      "yedek": false
+      "yedek": false,
+      "story_id": "18090036575215986"
     },
     "1": {
       "container_id": "18120426964851935",
