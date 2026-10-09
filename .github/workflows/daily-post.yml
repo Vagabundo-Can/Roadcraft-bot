@@ -45,6 +45,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           BOT_DATE: ${{ inputs.tarih }}
+          ZAMANLI: ${{ github.event_name == 'schedule' && '1' || '' }}
           TEST_SCRIPT: ${{ inputs.test }}
           SADECE_EKSTRA: ${{ (github.event.schedule == '20 4 * * *' || inputs.ekstra == 'true') && '1' || '' }}
         run: |

@@ -48,6 +48,12 @@ def cmd_render():
         row = {"konu": s.get("baslik", ts), "ana_mesaj": ""}
         return write_today({"gun_no": key, "tarih": d.isoformat(), "dosya": f"v/{ts}.mp4", "caption": caption_for(s, row),
                             "sablon": s["sablon"], "sutun": "Test", "konu": row["konu"], "yedek": False})
+    if os.environ.get("ZAMANLI") and not os.environ.get("SADECE_EKSTRA"):
+        import datetime as _dt
+        from .config import TZ
+        h = _dt.datetime.now(TZ).hour
+        if not 9 <= h < 23:   # GitHub zamanlayıcısı saatlerce gecikirse gece yarısı paylaşma
+            log.info("Saat %s: yayın penceresi dışında, atlanıyor.", h); return write_today(None)
     extra = {str(e["tarih"]): int(e["gun_no"]) for e in (CFG["yayin"].get("ekstra") or [])}
     if os.environ.get("SADECE_EKSTRA"):
         if d.isoformat() not in extra:
@@ -134,4 +140,10 @@ def cmd_post(base_url, client=None):
 
 if __name__ == "__main__":
     if sys.argv[1] == "render": cmd_render()
-    elif sys.argv[1] == "post": cmd_post(sys.argv[2])
+    elif sys.argv[1] == "post":
+        try:
+            cmd_post(sys.argv[2])
+        except Exception:
+            import traceback, datetime as _dt
+            (DATA / "son_hata.txt").write_text(_dt.datetime.utcnow().isoformat() + "Z\n" + traceback.format_exc()[-3000:], encoding="utf-8")
+            raise
