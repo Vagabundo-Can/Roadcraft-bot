@@ -24,7 +24,7 @@ SCHEMA = {
  "challenge": '{"sablon":"challenge","kanca":"≤6 kelime","baslik":"drill adı","seviye":"Seviye 1/2/3","duzen":DUZEN,"kurallar":["2-3 madde ≤10 kelime"],"caption":"kapalı ve güvenli alan vurgusu + denemeyi yorumla daveti","hashtags":[...]}',
  "efsane": '{"sablon":"efsane","kanca":"","iddia":"≤8 kelime yaygın inanış","hukum":"EFSANE | GERÇEK | KISMEN","aciklama":["2-3 madde ≤12 kelime"],"caption":"...","hashtags":[...]}',
  "ekipman": '{"sablon":"ekipman","kanca":"≤7 kelime","baslik":"konu","maddeler":["3 madde ≤12 kelime"],"ipucu":"≤18 kelime","caption":"...","hashtags":[...]}',
- "yorum_soru": '{"sablon":"yorum_soru","kanca":"≤8 kelime","soru":"takipçi sorusu (anonim, ≤22 kelime)","cevap":["2-3 madde ≤12 kelime"],"caption":"...","hashtags":[...]}',
+ "yorum_soru": '{"sablon":"yorum_soru","kanca":"≤8 kelime","soru":"motosikletçilerin sık sorduğu bir soru (≤22 kelime; gerçek yorumlardan gelmiyorsa takipçi sordu deme)","cevap":["2-3 madde ≤12 kelime"],"caption":"...","hashtags":[...]}',
  "mini_sinav": '{"sablon":"mini_sinav","kanca":"≤8 kelime","sorular":[{"s":"≤14 kelime","c":"≤6 kelime"}, ... tam 3 adet],"caption":"...","hashtags":[...]}',
 }
 SAHNE = ('{"ogeler":[{"tip":"araba|park|kamyon|otobus|yaya|cocuk|bisiklet|top|motosiklet|yan_yol_araba",'

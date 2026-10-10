@@ -539,7 +539,7 @@ def build_yorum_soru(s):
     tl = Timeline(); t = hook_section(tl, s, dur=1.6)
     q = s.get("soru", "")
     im = card(q, 900, 50, align="left", bg=(245, 245, 245, 250), fg=(20, 20, 20))
-    hd = card("Bir takipçimiz sordu:", 900, 36, align="left", bg=(0, 0, 0, 0), fg=(200, 200, 200), pad=10)
+    hd = card("Sık sorulan soru:", 900, 36, align="left", bg=(0, 0, 0, 0), fg=(200, 200, 200), pad=10)
     tl.add(hd, t, 99, 300); tl.add(im, t + 0.1, 99, 360); t += read_time(q) + 0.6
     cv = s.get("cevap", [])[:3]; dc = 1.0 + sum(read_time(x, 1.8, 4.5) for x in cv)
     tl.add(steps_card(cv, ACCENT["yorum_soru"], 900, 46, "Cevap"), t, 99, 380 + im.height + 30); t += dc
@@ -603,7 +603,7 @@ def still(script, t, path):
 KAPAK_ROZET = {"dogru_yanlis": "ÇOĞU SÜRÜCÜ BUNU YANLIŞ YAPIYOR", "teknik": "ÇOĞU SÜRÜCÜ BUNU BİLMİYOR",
                "quiz": "SEN OLSAN NE YAPARDIN?", "cevap": "DOĞRU CEVAP ŞAŞIRTABİLİR", "tehlike": "KAÇ TEHLİKE GÖRÜYORSUN?",
                "challenge": "YAPABİLİR MİSİN?", "efsane": "EFSANE Mİ, GERÇEK Mİ?", "ekipman": "BUNU KONTROL ETMEDEN BİNME",
-               "yorum_soru": "EN ÇOK SORULAN SORU", "mini_sinav": "3 SORU: KAÇINI BİLİRSİN?"}
+               "yorum_soru": "SIK SORULAN SORU", "mini_sinav": "3 SORU: KAÇINI BİLİRSİN?"}
 KAPAK_AN = {"dogru_yanlis": 0.32, "quiz": 0.62, "cevap": 0.55, "tehlike": 0.78, "challenge": 0.45, "efsane": 0.55}
 KAPAK_SIMGE = {"quiz": "?", "tehlike": "!", "dogru_yanlis": "!", "efsane": "?", "mini_sinav": "?", "challenge": "!"}
 
