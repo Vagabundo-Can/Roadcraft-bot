@@ -1,0 +1,24 @@
+{
+  "sablon": "ekipman",
+  "kanca": "Kask seçimi ve ECE 22.06: 30 saniyede",
+  "baslik": "Kask seçimi ve ECE 22.06",
+  "maddeler": [
+    "Çene kayışındaki etikette ECE 22.06 yazıyor mu, bak.",
+    "Kask kafada oynamamalı. Yanakları hafif sıkmalı.",
+    "Vizör çiziliyse gece ışığı dağılır. Değiştir."
+  ],
+  "ipucu": "Kaskı satın almadan önce birkaç dakika tak. Baskı noktası varsa başka model dene.",
+  "kapak": "Kaskında bu etiket var mı?",
+  "caption": "ECE 22.06, kasklarda geçerli olan güncel standart. Önceki 22.05'e göre daha kapsamlı testler içeriyor. Etiketi kontrol et, ölçünü doğru seç, kaskı kafanda test et. Darbe alan kaskı, dışı sağlam görünse bile değiştir. Gece ve sisli havada vizör temizliği görüşünü doğrudan etkiler. Bir sonraki videoda vizör bakımına bakacağız.",
+  "hashtags": [
+    "#motosiklet",
+    "#kask",
+    "#ECE2206",
+    "#motosikletgüvenliği",
+    "#ileriSürüşEğitimi",
+    "#Roadcraft",
+    "#motorcuTürkiye",
+    "#güvenliSürüş"
+  ],
+  "_duzeltildi": "Teknik içerikte ciddi hata yok: ECE 22.06 etiketinin çene kayışında olması, 22.05'e göre daha kapsamlı test içermesi ve darbe alan kaskın değiştirilmesi yaygın kabul gören bilgiler. Sorunlar dil ve ekran uyumunda. Caption'daki 'Darbe alan kaskı dışı sağlam görünse bile değiştir' cümlesi virgül eksikliğinden anlaşılmıyor. 'Yanaklar hafif sıkmalı' ifadesi özneyi yanlış kuruyor, sıkan şey kask. Madde 2 ve 3 videoda ekrana sığmayacak kadar uzun. 'Vizör şart' ifadesi de belirsiz, net bir eyleme çevrildi."
+}

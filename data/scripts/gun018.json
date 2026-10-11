@@ -1,0 +1,28 @@
+{
+  "sablon": "cevap",
+  "kanca": "Dünkü sorunun cevabı: B, arkada kal.",
+  "soru": "Önündeki araba sola sinyal verip yavaşlıyor. Solda yol ağzı var, yol yaprak dolu. Sollar mısın, arkada mı kalırsın?",
+  "secenekler": {
+    "A": "Sol şeritten hızlıca sollarım",
+    "B": "Arkada kalır, dönüşünü beklerim"
+  },
+  "dogru": "B",
+  "aciklama": [
+    "Sola sinyal ve yavaşlama: araç dönüşe hazırlanıyor.",
+    "Sollarsan tam onun dönüş yoluna girersin.",
+    "Islak yaprakta fren ve kaçış payın çok azalır."
+  ],
+  "kural": "Solda yol ağzı varsa sollama yok; yavaşlama bir işarettir.",
+  "kapak": "Yavaşlayan araç sana bir şey söylüyor",
+  "caption": "Dünkü sorunun cevabı B. Önündeki araç sola sinyal verip yavaşlıyorsa ve solda yol ağzı varsa, sollamak için bir sebep yok. Sürücü dönüşe hazırlanıyor ve seni görmemiş olabilir. Roadcraft'ın bilgi toplama adımı tam burada devreye girer: sinyal, yavaşlama ve yol ağzını birlikte oku. Sonbaharda yaprak ve ilk yağmur tutuşu düşürür, o yüzden kaçış payını azaltma. Arkada kal, dönüşü bekle, yolu açık gördüğünde devam et. Sen ne seçmiştin, yoruma yaz.",
+  "hashtags": [
+    "#motosikletegitimi",
+    "#ileriSurusEgitimi",
+    "#motorcycleroadcraft",
+    "#guvenlisurus",
+    "#sollama",
+    "#sonbahar",
+    "#motosikletgüvenliği",
+    "#motorcu"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "sablon": "dogru_yanlis",
+  "kanca": "Tepeyi göremiyorsan karşıyı da göremiyorsun",
+  "yanlis": {
+    "durum": "Kamyonun arkasında sabırsızlanırsın. Tepe üstünde yolu göremeden sollamaya çıkarsın.",
+    "sonuc": "RAMAK KALA!"
+  },
+  "dogru": {
+    "adimlar": [
+      "Tepeye yaklaşırken gazı bırak, mesafeni aç",
+      "Görebildiğin yol sollamayı bitirmeye yetmeli",
+      "Yetmiyorsa kamyonun arkasında bekle",
+      "Net ve uzun düz yolda sollamayı planla"
+    ]
+  },
+  "kural": "Gördüğün boş yol sollamayı bitirmene yetmiyorsa sollamaya başlama.",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "kamyon",
+        "serit": "sag",
+        "y": 0.6
+      },
+      {
+        "tip": "araba",
+        "serit": "sol",
+        "y": 0.2,
+        "tehlike": "Tepenin ardından çıkan karşı araç"
+      }
+    ],
+    "kavsak": false,
+    "yaya_gecidi": false,
+    "yuzey": "normal"
+  },
+  "kapak": "Göremediğin yolda sollama yok",
+  "caption": "Tepe üstünde karşıdan gelen aracı göremezsin, o da seni göremez. Sollamayı bitirmek için gereken yolu önce sen görmelisin. Görmüyorsan beklemek en güvenli seçenek. Sen sollamadan önce nelere bakıyorsun?",
+  "hashtags": [
+    "#motosikletegitimi",
+    "#roadcraft",
+    "#sollama",
+    "#sürüşgüvenliği"
+  ]
+}

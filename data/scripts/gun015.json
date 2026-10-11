@@ -1,0 +1,42 @@
+{
+  "sablon": "dogru_yanlis",
+  "kanca": "Sinyal vermeden sola döndü…",
+  "yanlis": {
+    "durum": "Öndeki araç yavaşlıyor, solda yol ağzı var. Sinyal yok, ben yine de sollamaya başlıyorum.",
+    "sonuc": "RAMAK KALA!"
+  },
+  "dogru": {
+    "adimlar": [
+      "Yavaşlayan aracı ve soldaki yol ağzını oku.",
+      "Gazı kes, mesafeyi aç, sağ şeritte kal.",
+      "Dönüş bitince yol açıksa sollamayı düşün."
+    ]
+  },
+  "kural": "Solda yol ağzı varsa sollama yok; yavaşlayan araç bir işarettir.",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "araba",
+        "serit": "sag",
+        "y": 0.55,
+        "tehlike": "Yavaşlıyor, sinyalsiz sola dönebilir"
+      },
+      {
+        "tip": "araba",
+        "serit": "sol",
+        "y": 0.2
+      }
+    ],
+    "kavsak": 0.45,
+    "yaya_gecidi": false,
+    "yuzey": "yaprak"
+  },
+  "kapak": "Sinyal yok ama işaret var",
+  "caption": "Sinyal vermeyen sürücü çok olur, o yüzden sinyale güvenme, aracın davranışını oku. Yavaşlama ve solda yol ağzı birlikte görünüyorsa sollama aklından çıksın. Sonbaharda yapraklı zemin kaçış payını da azaltır, mesafeni geniş tut. Sen yavaşlayan bir aracın arkasında ilk neye bakıyorsun?",
+  "hashtags": [
+    "#motosikletegitimi",
+    "#roadcraft",
+    "#guvenlisurus",
+    "#sollama"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "sablon": "challenge",
+  "kanca": "Bunu yapabilir misin? Dar U dönüşü",
+  "baslik": "Dar U Dönüşü: Seviye 1 Kontrol Drilli",
+  "seviye": "Seviye 1",
+  "duzen": {
+    "tip": "u_donus",
+    "genislik_m": 8,
+    "uzunluk_m": 12
+  },
+  "kurallar": [
+    "Bakışın dönüş yönünde, koninin ötesinde olsun.",
+    "Debriyajı yarı bırak, gazı sabit tut.",
+    "Sadece kapalı alanda, tam ekipmanla dene."
+  ],
+  "kapak": "Dar U dönüşü: yapabilir misin?",
+  "caption": "Bu drill sadece kapalı ve güvenli bir alanda yapılır: boş otopark ya da eğitim sahası, trafikten uzak. Tam ekipman şart. Sonbaharda zemindeki yaprak ve nem tutuşu düşürür, önce alanı süpür, zemini kontrol et. Ölçüler videoda: genişlik 8 m, uzunluk 12 m. Kendi denemeni çek, beni etiketle, nasıl geçtiğini yorumla. Önce sol, sonra sağ yönde dene. Hangi yönde zorlandın?",
+  "hashtags": [
+    "#Challenge",
+    "#MotosikletEğitimi",
+    "#İleriSürüş",
+    "#DarUDönüşü",
+    "#MotosikletGüvenliği",
+    "#Roadcraft",
+    "#YavaşHızKontrolü",
+    "#GüvenliSürüş",
+    "#Sonbahar",
+    "#MotorcuTürkiye"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "sablon": "quiz",
+  "kanca": "Sen olsan ne yapardın?",
+  "soru": "Önündeki araba sola sinyal verip yavaşlıyor. Solda yol ağzı var, yol yaprak dolu. Sollar mısın, arkada mı kalırsın?",
+  "secenekler": {
+    "A": "Sol şeritten hızlıca sollarım",
+    "B": "Arkada kalır, dönüşünü beklerim"
+  },
+  "dogru": "B",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "araba",
+        "serit": "sag",
+        "y": 0.6,
+        "tehlike": "Sola sinyal veriyor, yavaşlıyor"
+      },
+      {
+        "tip": "araba",
+        "serit": "sol",
+        "y": 0.25
+      }
+    ],
+    "kavsak": 0.5,
+    "yaya_gecidi": false,
+    "yuzey": "yaprak"
+  },
+  "kapak": "Dönüşten bir saniye önce",
+  "caption": "Önündeki araç yavaşlayıp sola sinyal veriyor, solda da yol ağzı var. A mı B mi? Cevabını yorumlara yaz, çözümü yarın anlatacağım.",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikletegitimi",
+    "#ileriSürüş",
+    "#güvenliSürüş",
+    "#roadcraft",
+    "#sollama",
+    "#sonbahar",
+    "#motorcu",
+    "#sürüşEğitimi",
+    "#quiz"
+  ]
+}
