@@ -1,0 +1,32 @@
+{
+  "sablon": "mini_sinav",
+  "kanca": "Bu haftayı ne kadar takip ettin? 3 soru",
+  "sorular": [
+    {
+      "s": "Sisli havada öndeki araçla takip mesafeni nasıl ayarlamalısın?",
+      "c": "Mesafeyi artır, hızı düşür"
+    },
+    {
+      "s": "Islak zeminde yol çizgileri ve rögar kapakları nasıl davranabilir?",
+      "c": "Çok kaygan olabilir"
+    },
+    {
+      "s": "Gece sürüşte hızın, hangi mesafe içinde durabilmene göre seçilmeli?",
+      "c": "Net görebildiğin mesafe"
+    }
+  ],
+  "kapak": "3 soruda haftanı test et",
+  "caption": "Bu haftanın görüş temalı konularından 3 hızlı soru. Önce kendi cevabını ver, sonra videonun sonundaki cevaplarla karşılaştır. Kaç doğru yaptın? Yoruma yaz, eksik kaldığın konuyu haftalık özetten tekrar et.",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikletegitimi",
+    "#guvenlisürüş",
+    "#ileriSürüşTekniği",
+    "#sisligörüş",
+    "#geceSürüşü",
+    "#ıslakzemin",
+    "#motosikletgüvenliği",
+    "#roadcraft",
+    "#minisınav"
+  ]
+}

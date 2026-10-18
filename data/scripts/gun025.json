@@ -1,0 +1,29 @@
+{
+  "sablon": "cevap",
+  "kanca": "Dünkü sorunun cevabı: A. Son bakış omuzdan.",
+  "soru": "Islak yolda önündeki kamyon yavaş. Aynaya baktın, sinyal verdin. Sol şeride geçmeden hemen önce ne yaparsın?",
+  "secenekler": {
+    "A": "Omzumun üstünden son kez bakarım",
+    "B": "Aynada boştu, direkt geçerim"
+  },
+  "dogru": "A",
+  "aciklama": [
+    "Ayna kör noktayı göstermez; orada araç kaybolabilir.",
+    "Sinyal niyetini söyler, yolun boş olduğunu garanti etmez.",
+    "Islak zeminde ani hareket yok: bakış kısa, gidon hareketi yumuşak."
+  ],
+  "kural": "Şerit değiştirmeden önce son bakış omuzdan: ayna, sinyal, omuz.",
+  "kapak": "Ayna her şeyi göstermez",
+  "caption": "Dünkü sorunun cevabı A: omzunun üstünden son kez bak. Ayna sana yolun büyük kısmını gösterir ama kör noktayı göstermez. Islak yolda bir hata için fazla yerin yok. Sırayı hep aynı tut: ayna, sinyal, omuz, sonra hareket. Sen şerit değiştirmeden önce omuz kontrolünü yapıyor musun? Yorumlara yaz.",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikletegitimi",
+    "#ileriSürüş",
+    "#güvenlisürüş",
+    "#omuzkontrolü",
+    "#ıslakzemin",
+    "#motosikletgüvenliği",
+    "#roadcraft"
+  ],
+  "_duzeltildi": "Sol şeride geçiş sağdan trafiğe uygun, omuz kontrolü ve ayna-sinyal-omuz sırası doğru. Tek sorun terim: motosiklette direksiyon yok, gidon var. Eğitmen hesabında bu hata güveni zedeler."
+}

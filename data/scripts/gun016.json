@@ -1,15 +1,27 @@
 {
   "sablon": "teknik",
-  "kanca": "Bakış yönü ile dönüş (kafa çevirme): çoğu sürücü bunu yanlış yapıyor",
-  "caption": "Bakış yönü ile dönüş (kafa çevirme) (Seviye 1). Kapalı alanda doğru uygulama + yaygın hata, tek ana ipucu.",
-  "hashtags": [],
-  "_yedek": true,
-  "baslik": "Bakış yönü ile dönüş (kafa çevirme) (Seviye 1)",
-  "hata": "Tekniği acele ve gergin uygulamak.",
+  "kanca": "Dönüşte sadece gözünü değil, kafanı çevir",
+  "baslik": "Bakış yönü ile dönüş (kafa çevirme)",
+  "hata": "Gözünü ön tekere ya da virajın içine dikmek; kafa gidonla birlikte düz kalıyor.",
   "adimlar": [
-    "Bakış ileri",
-    "Kollar gevşek",
-    "Yavaş başla, kademeli artır"
+    "Dönüşe girmeden çıkışta bir nokta seç.",
+    "Sadece gözünü değil, çeneni de çıkışa çevir.",
+    "Omuzlar ve dirsekler rahat, bakış çıkışta kalsın.",
+    "Gazı sabit ve yumuşak tut."
   ],
-  "ipucu": "Önce kapalı alanda, düşük hızda dene."
+  "ipucu": "Bakış çıkışa gitmeden gidonu çevirme. Önce kafa, sonra motor.",
+  "kapak": "Kafan nereye, motor oraya",
+  "caption": "Sonbaharda yapraklar ve ıslak zemin hata payını azaltır, günler de kısalır. Bu yüzden temel teknik şimdi oturmalı. Kapalı alanda düşük hızda dene: önce çıkışta bir nokta seç, sonra kafanı oraya çevir. Sağa ve sola dönüşü ayrı ayrı çalış. Hız değil, bakışın doğru yerde olması hedef. Sen dönüşte nereye bakıyorsun?",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikletegitimi",
+    "#ileriSürüş",
+    "#kapalıalantekniği",
+    "#bakışyönü",
+    "#sürüşgüvenliği",
+    "#roadcraft",
+    "#sonbahar",
+    "#motorcu",
+    "#türkiye"
+  ]
 }

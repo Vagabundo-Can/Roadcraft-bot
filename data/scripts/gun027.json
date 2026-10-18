@@ -1,0 +1,29 @@
+{
+  "sablon": "challenge",
+  "kanca": "Bunu yapabilir misin? Sekiz çizme",
+  "baslik": "Sekiz Çizme",
+  "seviye": "Seviye 1",
+  "duzen": {
+    "tip": "sekiz",
+    "mesafe_m": 12
+  },
+  "kurallar": [
+    "Sadece kapalı, kuru ve boş alanda dene.",
+    "Bakışın dönüşün çıkışında olsun.",
+    "Gaz akıcı, hız düşük, kontrol sende."
+  ],
+  "kapak": "Sekizi temiz çizebilir misin?",
+  "caption": "Sekiz çizme, Seviye 1. Kurulum ölçüleri videoda: iki nokta arası 12 metre. Bunu yalnızca trafikten uzak, kapalı ve kuru bir alanda dene. Kaskını ve koruyucu ekipmanını tam tak. Bu ayın teması görüş. Sekizde de bakışın gittiği yere motor gider, o yüzden gözün dönüşün çıkışında olsun. Denedin mi? Videonu etiketle, nasıl geçtiğini yorumda yaz.",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikletegitimi",
+    "#ileriSürüş",
+    "#güvenlisürüş",
+    "#sekizçizme",
+    "#challenge",
+    "#kontrol",
+    "#motorcycleroadcraft",
+    "#motosikletTürkiye",
+    "#kapalıalan"
+  ]
+}

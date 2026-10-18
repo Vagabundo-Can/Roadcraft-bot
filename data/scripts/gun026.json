@@ -1,0 +1,55 @@
+{
+  "sablon": "tehlike",
+  "kanca": "Bu sahnede kaç tehlike var? Say, sonra izle",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "kamyon",
+        "serit": "sag",
+        "y": 0.35,
+        "tehlike": "Kamyonun arkası sprey kaldırıyor, görüşü kapatıyor"
+      },
+      {
+        "tip": "araba",
+        "serit": "sag",
+        "y": 0.7,
+        "tehlike": "Önümdeki araç ani fren yapabilir, mesafe kısa"
+      },
+      {
+        "tip": "park",
+        "serit": "sag_park",
+        "y": 0.55,
+        "tehlike": "Emniyet şeridinde duran araç şeride girebilir"
+      },
+      {
+        "tip": "araba",
+        "serit": "sag",
+        "y": 0.15,
+        "tehlike": "Uzaktaki fren lambaları: önde yavaşlama başlıyor"
+      },
+      {
+        "tip": "otobus",
+        "serit": "sol",
+        "y": 0.4
+      }
+    ],
+    "kavsak": false,
+    "yaya_gecidi": false,
+    "yuzey": "islak"
+  },
+  "kapanis": "Tehlikeyi erken gören, ani karar vermek zorunda kalmaz.",
+  "kapak": "Islak otoyolda gizli tehlikeler",
+  "caption": "Otoyolda ıslak zemin ve düşük görüş bir araya gelince tehlikeler birbirine karışır. Videoda kaç tehlike saydın? Roadcraft'ın gözlem dersi şu: tehlikeyi tek tek değil, sahnenin tamamını okuyarak ara. Uzaktaki fren lambalarına, büyük araçların arkasındaki spreye, emniyet şeridindeki araçlara bak. Önündeki araçla aranı 2 saniye kuralıyla ayarla, ıslakta bu mesafeyi daha da aç. Erken fark eden, sakin karar verir. Saydığın sayıyı yoruma yaz.",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikletegitimi",
+    "#ileriSürüş",
+    "#roadcraft",
+    "#tehlikeavı",
+    "#otoyol",
+    "#ıslakzemin",
+    "#güvenlisürüş",
+    "#motorcu",
+    "#sürüşeğitimi"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "sablon": "teknik",
+  "kanca": "Düşük hızda dengeyi debriyaj belirler",
+  "baslik": "Debriyaj sürtme ile düşük hız",
+  "hata": "Debriyajı ya tam çekiyor ya tam bırakıyor; gazı ve bakışı sabit tutamıyor.",
+  "adimlar": [
+    "Gazı sabit tut, debriyajı sürtme noktasında bekle.",
+    "Hızı debriyajla, gerekirse hafif arka frenle ayarla.",
+    "Başını ve gözünü gideceğin yöne çevir.",
+    "Dizlerle depoyu kavra, kollar gevşek kalsın."
+  ],
+  "ipucu": "Gazı sabit tut; hızı gaz değil, debriyaj ve arka fren ayarlasın. Önce kapalı alanda, kuru zeminde dene.",
+  "kapak": "Düşük hızın sırrı debriyajda",
+  "caption": "Düşük hızda denge, debriyaj kontrolünden gelir. Gazı sabit tut, hızı debriyaj ve arka frenle ayarla, bakışını gideceğin yöne çevir. Pürüzsüz kontrol, Roadcraft'ın vurguladığı sakin ve kontrollü sürüşün önemli bir parçasıdır. Önce kapalı alanda, kuru zeminde ve tam koruyucu ekipmanla çalış. Sen bu egzersizde en çok neye takılıyorsun?",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikletegitimi",
+    "#ileriSürüş",
+    "#debriyajkontrolü",
+    "#kapalıalantekniği",
+    "#roadcraft",
+    "#sürüşgüvenliği",
+    "#motorcu"
+  ],
+  "_duzeltildi": "Caption'da iki sorun var. (1) 'Sis, gece ve ıslak zeminde de aynı şekilde işe yarar' ifadesi dayanaksız ve riskli: düşük hız tekniği kaygan zeminde aynı sonucu vermez ve okuru bu koşullarda denemeye yöneltebilir. (2) 'Roadcraft'taki kontrol anlayışının temelidir' abartılı bir atıf. Ayrıca kanca ('çoğu sürücü yanlış yapıyor') kanıtlanamayan genelleme içeriyor ve hashtag'de yazım hatası var (#kapalıalanteknigi)."
+}

@@ -1,0 +1,42 @@
+{
+  "sablon": "quiz",
+  "kanca": "Sen olsan ne yapardın?",
+  "soru": "Islak yolda önündeki kamyon yavaş. Aynaya baktın, sinyal verdin. Sol şeride geçmeden hemen önce ne yaparsın?",
+  "secenekler": {
+    "A": "Omzumun üstünden son kez bakarım",
+    "B": "Aynada boştu, direkt geçerim"
+  },
+  "dogru": "A",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "kamyon",
+        "serit": "sag",
+        "y": 0.5
+      },
+      {
+        "tip": "araba",
+        "serit": "sol",
+        "y": 0.88,
+        "tehlike": "Kör noktada, arkadan yaklaşan araç"
+      }
+    ],
+    "kavsak": false,
+    "yaya_gecidi": false,
+    "yuzey": "islak"
+  },
+  "kapak": "Ayna bunu göstermez",
+  "caption": "Ramak kala anından 1 saniye önce dondurduk. Sen A mı B mi dersin? Cevabını ve nedenini yorumlara yaz. Çözüm yarın burada. Kaydet, yarın karşılaştır.",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikleteğitimi",
+    "#ileriSürüş",
+    "#roadcraft",
+    "#güvenliSürüş",
+    "#omuzKontrolü",
+    "#ıslakZemin",
+    "#motorcu",
+    "#sürüşTeknikleri",
+    "#quiz"
+  ]
+}
