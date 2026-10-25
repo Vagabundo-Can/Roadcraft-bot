@@ -1,0 +1,25 @@
+{
+  "sablon": "cevap",
+  "kanca": "Dünkü sorunun cevabı: sollamada ilk adım neydi?",
+  "soru": "Gece, ıslak yolda öndeki kamyonu sollayacaksın. İlk iş ne?",
+  "secenekler": "A) Hemen sol şeride çıkıp hızlanmak / B) Takip mesafesinden görüş alıp hazırlık pozisyonuna geçmek / C) Kamyona yaklaşıp arkasından yolu görmeye çalışmak",
+  "dogru": "B",
+  "aciklama": [
+    "Takip mesafesi görüş açar; yapışırsan yol kapanır.",
+    "Hazırlık pozisyonunda yolu oku, karşıdan gelen var mı bak.",
+    "Boşluk yeterli değilse vazgeç; karar görüşe göre verilir."
+  ],
+  "kural": "Gece ve ıslakta mesafeyi aç, görüşü al, kararı sonra ver.",
+  "kapak": "Sollamada karar en son verilir",
+  "caption": "Doğru cevap B. Sollamada acele eden değil, görüş alan kazanır. Önce takip mesafesinden yolu oku, sonra hazırlık pozisyonuna geç. Gece ve ıslak zeminde mesafeni artır. Net görmüyorsan sollama, bekle. Sen hangi şıkkı işaretlemiştin?",
+  "hashtags": [
+    "#motosikletegitimi",
+    "#ileriSürüş",
+    "#roadcraft",
+    "#güvenlisürüş",
+    "#sollama",
+    "#geceSürüşü",
+    "#ıslakzemin",
+    "#motosikletgüvenliği"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "sablon": "yorum_soru",
+  "kanca": "Gece sürüşünde en sık sorulan soru",
+  "soru": "Gece karşıdan gelen far gözümü alınca ne yapmalıyım?",
+  "cevap": [
+    "Bakışını farlardan yolun sağ kenarına kaydır.",
+    "Gazı kes, hızını düşür; göremediğin yere hızla girme.",
+    "Vizörü çiziksiz ve temiz tut; kirli vizör ışığı dağıtır."
+  ],
+  "kapak": "Far gözünü alınca ne yap?",
+  "caption": "Gece sürüşünde sık sorulan bir soru: karşıdan gelen far gözünü alınca ne yapmalısın? Bakışını farın kendisine değil, yolun sağ kenarına ver. Hızını göreceğin mesafeye göre ayarla. Roadcraft mantığı basit: göremiyorsan hızını düşür, bilgi toplamaya devam et. Kamaşma geçmiyorsa güvenli bir yerde dur. Sen gece sürüşünde en çok neyde zorlanıyorsun? Yorumlara yaz.",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikletegitimi",
+    "#ileriSurusEgitimi",
+    "#geceSurusu",
+    "#motosikletguvenligi",
+    "#roadcraft",
+    "#surusguvenligi",
+    "#motorcu"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "sablon": "quiz",
+  "kanca": "Sen olsan ne yapardın?",
+  "soru": "Islak yolda kamyonun arkasındasın. Karşı şeritten araç yaklaşıyor, önünü göremiyorsun. Sollama kararını nasıl verirsin?",
+  "secenekler": {
+    "A": "Yaklaşır, boşluk görünce hemen çıkarım",
+    "B": "Mesafeyi korur, görüş alıp sonra karar veririm"
+  },
+  "dogru": "B",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "kamyon",
+        "serit": "sag",
+        "y": 0.6,
+        "tehlike": "Görüşü kapatıyor"
+      },
+      {
+        "tip": "araba",
+        "serit": "sol",
+        "y": 0.3,
+        "tehlike": "Karşıdan yaklaşıyor"
+      }
+    ],
+    "kavsak": false,
+    "yaya_gecidi": false,
+    "yuzey": "islak"
+  },
+  "kapak": "Sollamadan önceki o saniye",
+  "caption": "Ramak kala anından 1 saniye önce dondurduk. A mı B mi? Cevabını ve nedenini yorumlara yaz. Çözüm yarın burada.",
+  "hashtags": [
+    "#motosikletegitimi",
+    "#ileriSürüş",
+    "#roadcraft",
+    "#sollama",
+    "#ıslakzemin",
+    "#güvenlisürüş",
+    "#motosiklet",
+    "#quiz"
+  ]
+}

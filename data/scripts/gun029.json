@@ -1,0 +1,18 @@
+{
+  "sablon": "dogru_yanlis",
+  "kanca": "Viraj 'boş' görünüyordu",
+  "caption": "Kör viraj girişinde sollama. Görüş sınırı geriye gidiyorsa sollama bölgesi bitmiştir.",
+  "hashtags": [],
+  "_yedek": true,
+  "yanlis": {
+    "durum": "Viraj 'boş' görünüyordu",
+    "sonuc": "RAMAK KALA!"
+  },
+  "dogru": {
+    "adimlar": [
+      "Kör viraj girişinde sollama",
+      "Erken gör, erken karar ver"
+    ]
+  },
+  "kural": "Görüş sınırı geriye gidiyorsa sollama bölgesi bitmiştir."
+}

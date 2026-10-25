@@ -1,0 +1,30 @@
+{
+  "sablon": "challenge",
+  "kanca": "Bunu yapabilir misin? Acil fren noktası",
+  "baslik": "Acil Fren Noktası",
+  "seviye": "Seviye 1",
+  "duzen": {
+    "tip": "fren",
+    "fren_noktasi_m": 15,
+    "durma_kutusu_m": 6
+  },
+  "kurallar": [
+    "Sadece kapalı alan, kuru zemin, tam ekipman.",
+    "Fren noktasına sabit ve düşük hızla gel.",
+    "Frene yumuşak başla, kademeli sık, kutuda dur."
+  ],
+  "kapak": "Kutunun içinde durabilir misin?",
+  "caption": "Acil fren noktası, Seviye 1. Kurulum ölçüleri videoda: fren noktası 15 m, durma kutusu 6 m. Bu drill yalnızca kapalı ve güvenli bir alanda, kuru zeminde, tam koruyucu ekipmanla denenir. Yola, park yerine ya da trafiğe açık bir alana kurma. Bu ayın teması görüş ve ıslak zemin, ama önce kuru zeminde kontrolü oturtuyoruz. Denemeni çekip beni etiketle, kutuda mı durdun yoksa taştın mı yorumlara yaz. Birlikte çalışalım.",
+  "hashtags": [
+    "#Challenge",
+    "#MotosikletEğitimi",
+    "#İleriSürüş",
+    "#AcilFren",
+    "#FrenTekniği",
+    "#Roadcraft",
+    "#GüvenliSürüş",
+    "#MotosikletGüvenliği",
+    "#KapalıAlanEğitimi",
+    "#MotorcuYoldaşlığı"
+  ]
+}
