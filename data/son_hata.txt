@@ -1,4 +1,4 @@
-2026-10-25T12:46:22.059359Z
+2026-10-25T13:54:58.379243Z
 Traceback (most recent call last):
   File "/home/runner/work/Roadcraft-bot/Roadcraft-bot/bot/publish.py", line 125, in cmd_post
     res = ig.publish_reel(url, t["caption"], cover_url=cov, audio_name=t.get("ses_adi"))
@@ -8,7 +8,7 @@ Traceback (most recent call last):
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/Roadcraft-bot/Roadcraft-bot/bot/ig.py", line 36, in _req
     raise IGError(f"{r.status_code} {j.get('error', j)}")
-bot.ig.IGError: 400 {'message': 'Cannot call API for app 1570448811503310 on behalf of user 122098151937505752', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'Az4yl9zuEUatsOd6MrJ-Cw2'}
+bot.ig.IGError: 400 {'message': 'Cannot call API for app 1570448811503310 on behalf of user 122098151937505752', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'Adazk6HbJIG44hNcUUckUaA'}
 
 During handling of the above exception, another exception occurred:
 
@@ -23,4 +23,4 @@ Traceback (most recent call last):
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/Roadcraft-bot/Roadcraft-bot/bot/ig.py", line 36, in _req
     raise IGError(f"{r.status_code} {j.get('error', j)}")
-bot.ig.IGError: 400 {'message': 'Cannot call API for app 1570448811503310 on behalf of user 122098151937505752', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AgCINe0lyMeNw124rvQHrGH'}
+bot.ig.IGError: 400 {'message': 'Cannot call API for app 1570448811503310 on behalf of user 122098151937505752', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'Ah1Y9RPink-yA9nzOF0CZf7'}
