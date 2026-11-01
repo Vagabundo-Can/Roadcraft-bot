@@ -1,0 +1,45 @@
+{
+  "sablon": "quiz",
+  "kanca": "Sen olsan ne yapardın?",
+  "soru": "Islak yolda önündeki araba yavaşlıyor. Solda yan yol var, sinyal yok. Sollamak için boşluk görünüyor. Ne yaparsın?",
+  "secenekler": {
+    "A": "Hemen sola geçip sollarım",
+    "B": "Yavaşlar, mesafe açar, beklerim"
+  },
+  "dogru": "B",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "araba",
+        "serit": "sag",
+        "y": 0.65,
+        "tehlike": "Yavaşlıyor, sola dönebilir"
+      },
+      {
+        "tip": "yan_yol_araba",
+        "serit": "yan_yol_sol",
+        "y": 0.5
+      },
+      {
+        "tip": "araba",
+        "serit": "sol",
+        "y": 0.25
+      }
+    ],
+    "kavsak": 0.5,
+    "yaya_gecidi": false,
+    "yuzey": "islak"
+  },
+  "kapak": "Bu boşluk gerçek mi?",
+  "caption": "Cevabını yoruma yaz: A mı B mi? Çözüm yarın. Önündeki aracın yavaşlaması sana ne söylüyor?",
+  "hashtags": [
+    "#motosikletegitimi",
+    "#ileriSürüş",
+    "#roadcraft",
+    "#güvenlisürüş",
+    "#motosikletgüvenliği",
+    "#sollama",
+    "#ıslakzemin",
+    "#motorcu"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "sablon": "dogru_yanlis",
+  "kanca": "Kamyonu geçtin. Şeride ne zaman döneceksin?",
+  "yanlis": {
+    "durum": "Kamyonu solladın, aynaya yarım baktın. Farları görmeden sağa döndün, kamyonun önüne kestin.",
+    "sonuc": "RAMAK KALA!"
+  },
+  "dogru": {
+    "adimlar": [
+      "Aynada iki farı da gör.",
+      "Kamyonla aranda net boşluk bırak.",
+      "Sinyal ver, sonra şeride dön.",
+      "Islakta tek, yumuşak hareketle dön."
+    ]
+  },
+  "kural": "Aynada iki farı görmeden şeride dönme.",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "kamyon",
+        "serit": "sag",
+        "y": 0.55,
+        "tehlike": "Sollanan kamyonun önüne erken dönüş"
+      },
+      {
+        "tip": "araba",
+        "serit": "sag",
+        "y": 0.15
+      },
+      {
+        "tip": "araba",
+        "serit": "sol",
+        "y": 0.25,
+        "tehlike": "Karşı yönden gelen araç"
+      }
+    ],
+    "kavsak": false,
+    "yaya_gecidi": false,
+    "yuzey": "islak"
+  },
+  "kapak": "Sollamak yetmez, dönüş de önemli",
+  "caption": "Sollamanın bitişi, şeride döndüğün andır. Aynada sollanan aracın iki farını net görmeden dönmek, kamyonun önüne kesmek demektir. Zemin ıslaksa ani hareketten kaçın ve tek, yumuşak bir dönüş yap. Sen şeride dönmeden önce aynaya kaç saniye bakıyorsun?",
+  "hashtags": [
+    "#motosikletegitimi",
+    "#roadcraft",
+    "#guvenlisurus"
+  ]
+}

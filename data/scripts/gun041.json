@@ -1,0 +1,31 @@
+{
+  "sablon": "challenge",
+  "kanca": "Bunu yapabilir misin? Ofset slalom",
+  "baslik": "Ofset Slalom",
+  "seviye": "Seviye 1",
+  "duzen": {
+    "tip": "ofset",
+    "koni": 5,
+    "aralik_m": 8,
+    "ofset_m": 1
+  },
+  "kurallar": [
+    "Sadece kapalı alan, kuru zemin, tam koruyucu ekipman.",
+    "Bakış konide değil, çıkış noktasında olsun.",
+    "Sabit düşük hızda kal, gaz ve freni yumuşak kullan."
+  ],
+  "kapak": "Bakış nereye, motor oraya",
+  "caption": "Bu ayın teması görüş. Görüşün kısıtlandığı koşullarda kontrol, önce kuru ve kapalı alanda kurulan temele dayanır. Ölçüler ekranda: 5 koni, 8 metre aralık, 1 metre ofset. Bu drill'i yalnızca trafikten uzak, kapalı ve güvenli bir alanda dene. Sis, gece ya da ıslak zeminde deneme yapma. Denemeni videoya çekip hesabı etiketle, nasıl geçtiğini ve en çok nerede zorlandığını yoruma yaz.",
+  "hashtags": [
+    "#motosikletegitimi",
+    "#ileriSurusTeknikleri",
+    "#ofsetslalom",
+    "#Challenge",
+    "#motosikletgüvenliği",
+    "#kontrol",
+    "#roadcraft",
+    "#güvenlisürüş",
+    "#motosikletTürkiye",
+    "#kapalıalaneğitimi"
+  ]
+}

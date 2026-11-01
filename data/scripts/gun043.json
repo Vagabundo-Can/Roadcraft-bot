@@ -1,0 +1,18 @@
+{
+  "sablon": "dogru_yanlis",
+  "kanca": "Arada boşluk var sandın",
+  "caption": "Arka arkaya araç (konvoy) sollamak. Dönüş boşluğu garantili değilse konvoy sollanmaz.",
+  "hashtags": [],
+  "_yedek": true,
+  "yanlis": {
+    "durum": "Arada boşluk var sandın",
+    "sonuc": "RAMAK KALA!"
+  },
+  "dogru": {
+    "adimlar": [
+      "Arka arkaya araç (konvoy) sollamak",
+      "Erken gör, erken karar ver"
+    ]
+  },
+  "kural": "Dönüş boşluğu garantili değilse konvoy sollanmaz."
+}
