@@ -1,0 +1,31 @@
+{
+  "sablon": "tehlike",
+  "kanca": "Islakta en kaygan yer neresi?",
+  "caption": "Islak zeminde kaygan yüzeyler: yol çizgisi, rögar kapağı, tramvay rayı. Islakta boya çizgisi, rögar ve ray kayar. Bunları önceden oku, üstünde fren ve viraj yapma.",
+  "hashtags": [],
+  "_yedek": true,
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "park",
+        "serit": "sag_park",
+        "y": 0.35,
+        "tehlike": "Park halindeki araç: kapı açılabilir"
+      },
+      {
+        "tip": "yan_yol_araba",
+        "serit": "yan_yol_sag",
+        "y": 0.55,
+        "tehlike": "Yan yoldan çıkabilecek araç"
+      },
+      {
+        "tip": "yaya",
+        "serit": "kaldirim_sag",
+        "y": 0.2,
+        "tehlike": "Yola inebilecek yaya"
+      }
+    ],
+    "kavsak": 0.55
+  },
+  "kapanis": "Gözlem uzaktan başlar, tahminle biter."
+}
