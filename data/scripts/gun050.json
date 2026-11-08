@@ -1,0 +1,18 @@
+{
+  "sablon": "dogru_yanlis",
+  "kanca": "Uzak görünüyordu…",
+  "caption": "Karşıdan gelenin hızını okumak. Belirleyici olan mesafe değil kapanma hızıdır; iki hız toplanır.",
+  "hashtags": [],
+  "_yedek": true,
+  "yanlis": {
+    "durum": "Uzak görünüyordu…",
+    "sonuc": "RAMAK KALA!"
+  },
+  "dogru": {
+    "adimlar": [
+      "Karşıdan gelenin hızını okumak",
+      "Erken gör, erken karar ver"
+    ]
+  },
+  "kural": "Belirleyici olan mesafe değil kapanma hızıdır; iki hız toplanır."
+}

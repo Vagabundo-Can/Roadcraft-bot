@@ -1,18 +1,57 @@
 {
   "sablon": "dogru_yanlis",
   "kanca": "Arada boşluk var sandın",
-  "caption": "Arka arkaya araç (konvoy) sollamak. Dönüş boşluğu garantili değilse konvoy sollanmaz.",
-  "hashtags": [],
-  "_yedek": true,
   "yanlis": {
-    "durum": "Arada boşluk var sandın",
+    "durum": "Islak yolda dizilmiş araçlara yaklaştın. Arada boşluk gördün, hepsini tek hamlede sollamaya çalıştın.",
     "sonuc": "RAMAK KALA!"
   },
   "dogru": {
     "adimlar": [
-      "Arka arkaya araç (konvoy) sollamak",
-      "Erken gör, erken karar ver"
+      "Geride kal, takip mesafeni aç.",
+      "Karşı şeridi ve dönüş boşluğunu net gör.",
+      "Garanti yoksa sırada kal, sabret."
     ]
   },
-  "kural": "Dönüş boşluğu garantili değilse konvoy sollanmaz."
+  "kural": "Dönüş boşluğu garantili değilse konvoy sollanmaz.",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "araba",
+        "serit": "sag",
+        "y": 0.75
+      },
+      {
+        "tip": "araba",
+        "serit": "sag",
+        "y": 0.55
+      },
+      {
+        "tip": "kamyon",
+        "serit": "sag",
+        "y": 0.35
+      },
+      {
+        "tip": "araba",
+        "serit": "sag",
+        "y": 0.18
+      },
+      {
+        "tip": "araba",
+        "serit": "sol",
+        "y": 0.1,
+        "tehlike": "Konvoyun önünden çıkan karşı araç"
+      }
+    ],
+    "kavsak": false,
+    "yaya_gecidi": false,
+    "yuzey": "islak"
+  },
+  "kapak": "Konvoyun sonu görünmüyor",
+  "caption": "Araçların arasında boşluk görmek, bütün konvoyu geçecek yeri görmek demek değil. Islak yolda fren ve toparlanma payın zaten daralır. Dönüş boşluğu garantili değilse sırada kal. Sen konvoyun arkasında en çok neyle sınanıyorsun?",
+  "hashtags": [
+    "#motosikletegitimi",
+    "#roadcraft",
+    "#sollama",
+    "#güvenlisürüş"
+  ]
 }

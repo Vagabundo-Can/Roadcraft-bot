@@ -1,0 +1,28 @@
+{
+  "sablon": "cevap",
+  "kanca": "Dünkü sorunun cevabı: A. Tepe üstünde sollama yok.",
+  "soru": "Islak yol. Önünde yavaş kamyon, tepenin üstüne geliyorsun. Karşı şerit tepe ardında görünmüyor. Ne yaparsın?",
+  "secenekler": {
+    "A": "Arkada kalırım, görüş açılınca sollarım",
+    "B": "Hızlanıp tepe üstünde sollarım"
+  },
+  "dogru": "A",
+  "aciklama": [
+    "Tepe ardını göremiyorsan karşıdan gelen aracı da göremezsin.",
+    "Islak zeminde hızlanmak ve frenlemek zorlaşır, marjın azalır.",
+    "Yarım kalan sollamada kaçış alanın kalmaz."
+  ],
+  "kural": "Görüş mesafen sollamayı bitirecek mesafeden kısaysa başlama.",
+  "kapak": "Tepe ardında ne var?",
+  "caption": "Doğru cevap A. Yavaş kamyonun arkasında beklemek zaman kaybettirir, ama o zaman geri alınabilir. Tepe ardında karşılaşacağın bir araç geri alınamaz. Roadcraft'ın temeli şu: önce bilgi topla, sonra karar ver. Sollamadan önce görüş mesafeni ve boşluğu net olarak değerlendir. Islak zeminde marjın daha da azalır, o yüzden sabırlı ol. Sen ne yapardın, yoruma yaz.",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikletegitimi",
+    "#ileriSürüş",
+    "#güvenlisürüş",
+    "#roadcraft",
+    "#ıslakzemin",
+    "#sollama",
+    "#motosikletgüvenliği"
+  ]
+}

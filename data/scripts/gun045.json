@@ -1,0 +1,35 @@
+{
+  "sablon": "quiz",
+  "kanca": "Sen olsan ne yapardın?",
+  "soru": "Islak yol. Önünde yavaş kamyon, tepenin üstüne geliyorsun. Karşı şerit tepe ardında görünmüyor. Ne yaparsın?",
+  "secenekler": {
+    "A": "Arkada kalırım, görüş açılınca sollarım",
+    "B": "Hızlanıp tepe üstünde sollarım"
+  },
+  "dogru": "A",
+  "sahne": {
+    "ogeler": [
+      {
+        "tip": "kamyon",
+        "serit": "sag",
+        "y": 0.6,
+        "tehlike": "Tepe ardı görünmüyor"
+      }
+    ],
+    "kavsak": false,
+    "yaya_gecidi": false,
+    "yuzey": "islak"
+  },
+  "kapak": "Tepe üstü: sollar mısın?",
+  "caption": "A mı B mi? Seçimini ve nedenini yoruma yaz. Çözümü yarın anlatacağım. Sürüşte karar, görebildiğin yerde verilir.",
+  "hashtags": [
+    "#motosiklet",
+    "#ileriSürüş",
+    "#roadcraft",
+    "#motosikletEğitimi",
+    "#güvenliSürüş",
+    "#sollama",
+    "#ıslakZemin",
+    "#sürüşEğitimi"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "sablon": "challenge",
+  "kanca": "Bunu yapabilir misin? Kutu dönüşü",
+  "baslik": "Kutu (box) dönüşü",
+  "seviye": "Seviye 1",
+  "duzen": {
+    "tip": "u_donus",
+    "genislik_m": 8,
+    "uzunluk_m": 12
+  },
+  "kurallar": [
+    "Bakışın koniye değil, dönüş çıkışına olsun.",
+    "Yürüyüş hızında kal, gaz ve debriyajı dengele.",
+    "Dönüşün içinde ani fren yapma."
+  ],
+  "kapak": "Küçük kutu, büyük kontrol",
+  "caption": "Kutu dönüşü: düşük hızda kontrolün en net sınavı. Ölçüler ekranda, sen de kendi alanında kur. Sadece kapalı, temiz ve kuru bir alanda dene. Zemin ıslaksa ya da görüş kötüyse bu drill'i ertele. Kask ve tam koruyucu ekipman şart. Denemeni çek, beni etiketle ve hangi noktada zorlandığını yoruma yaz. Hepsine bakacağım.",
+  "hashtags": [
+    "#Challenge",
+    "#MotosikletEğitimi",
+    "#İleriSürüş",
+    "#KutuDönüşü",
+    "#YavaşHızKontrolü",
+    "#GüvenliSürüş",
+    "#Roadcraft",
+    "#MotosikletTürkiye",
+    "#SürüşTeknikleri",
+    "#KapalıAlanEğitimi"
+  ]
+}

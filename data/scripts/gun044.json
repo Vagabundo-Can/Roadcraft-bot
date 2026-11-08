@@ -1,0 +1,28 @@
+{
+  "sablon": "teknik",
+  "kanca": "Ön freni sıkma, önce yükle",
+  "baslik": "Ön fren kademeli sıkma (Seviye 1)",
+  "hata": "Kolu tek hamlede sert çekmek. Ön lastik yüklenmeden kilitlenme riski artar.",
+  "adimlar": [
+    "Gaz kapalı, gözler ileride, bilekler gevşek.",
+    "Önce hafif çek; süspansiyon otursun, ön lastik yüklensin.",
+    "Sonra baskıyı yumuşakça, kademeli artır.",
+    "Durmaya yakın kolu yumuşakça gevşet."
+  ],
+  "ipucu": "Tek kural: önce yükle, sonra sık. Islak veya kaygan zeminde bu geçiş daha yavaş ve daha yumuşak olmalı.",
+  "kapak": "Ön fren: önce yükle",
+  "caption": "Ön fren bir anahtar değil, bir kadran. Önce hafif çekip lastiği yüklüyoruz, sonra baskıyı kademeli artırıyoruz. Bu videodaki çalışma kapalı alan içindir. Önce kuru ve düz zeminde, tam koruyucu ekipmanla, mümkünse bir eğitmen eşliğinde dene. Islak ve kaygan zeminde marj daralır; sis ve gecede de görüş azaldığı için hata payı küçülür. Bu yüzden hareketi güvenli ortamda otomatiğe bağlamak gerekir. Sen frene nasıl başlıyorsun, yorumlara yaz.",
+  "hashtags": [
+    "#motosiklet",
+    "#motosikletegitimi",
+    "#ileriSürüş",
+    "#kapalıalan",
+    "#frenteknigi",
+    "#roadcraft",
+    "#güvenlisürüş",
+    "#ıslakzemin",
+    "#motorcu",
+    "#sürüşeğitimi"
+  ],
+  "_duzeltildi": "İki sorun var. (1) Caption'daki 'Roadcraft'ta bu başlık Kontrol alanına girer' iddiası doğrulanmış değil, kitabın bölüm yapısından emin olmadan yazılmamalı. (2) İpucu ve caption'da gece sürüşü, ıslak zeminle aynı kategoride sunulmuş. Gece frenin kademeli uygulanma şeklini değil görüş mesafesini etkiler, bu yüzden ifade yanıltıcı. Fren tekniği (önce yükle, sonra kademeli artır, durmaya yakın yumuşakça bırak) doğru ve yaygın kabul gören yaklaşımla uyumlu. Sağdan trafiği ilgilendiren bir konumlandırma ifadesi yok."
+}
